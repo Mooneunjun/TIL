@@ -6,6 +6,12 @@ JavaScript 학습 자료와 예제를 정리하고 기록하는 공간입니다.
 This is **my personal JavaScript study repository.**  
 It’s a space for organizing and recording JavaScript study materials and examples. I will collect essential concepts, code examples, and practice exercises here as I learn JavaScript. Note that this repository will not include projects, as they will be managed separately.
 
+## Velog 시리즈 / Velog Series
+
+JavaScript 학습 과정과 자료는 Velog 시리즈로도 정리하고 있습니다. 아래 링크를 통해 스터디 블로그 글을 볼 수 있습니다.
+
+[JavaScript 자바스크립트 시리즈 - MOON.DEVELOG](https://velog.io/@moon_dev/series/JavaScript-자바스크립트)
+
 ## 목차 / Contents
 
 - [학습 목록 / Study Topics](#학습-목록--study-topics)
