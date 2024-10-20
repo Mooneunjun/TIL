@@ -53,10 +53,69 @@ JavaScript 학습에 필요한 개념과 예제들을 다음과 같은 카테고
 
 ## 폴더명 규칙 / Folder Naming Rules
 
-폴더 이름은 해당 주제를 명확하게 알 수 있도록 소문자와 하이픈(-)을 사용하여 작성합니다. 예를 들면:
+폴더 이름은 해당 주제를 명확하게 알 수 있도록 **소문자**와 **하이픈(-)**을 사용하여 작성합니다. 이렇게 하면 폴더 구조가 일관성 있게 관리되고, 내용을 쉽게 찾을 수 있습니다.
 
-- `기본-문법` / `basic-syntax`
-- `데이터-타입` / `data-types`
-- `함수-스코프` / `functions-and-scope`
-- `dom-조작` / `dom-manipulation`
-- `es6-기능` / `es6-features`
+### 폴더 구조 예시:
+
+- **`기본 문법 및 개념` / `basic-syntax-and-concepts`**  
+  자바스크립트의 기본 문법과 개념을 다룹니다.
+- **`변수와 데이터 타입` / `variables-and-data-types`**  
+  변수 선언, 할당, 다양한 데이터 타입(숫자, 문자열, 불리언 등)을 다룹니다.
+- **`연산자와 제어 흐름` / `operators-and-control-flow`**  
+  연산자와 조건문, 반복문 등 제어 흐름 관련 내용을 다룹니다.
+- **`함수와 스코프` / `functions-and-scope`**  
+  함수 정의, 호출, 스코프(전역, 지역 스코프 등)를 다룹니다.
+- **`객체와 배열` / `objects-and-arrays`**  
+  객체(Object)와 배열(Array)의 생성 및 활용 방법을 다룹니다.
+- **`dom 조작` / `dom-manipulation`**  
+  DOM(Document Object Model)을 조작하는 방법을 다룹니다.
+- **`es6+ 기능` / `es6-plus-features`**  
+  ES6 이후에 추가된 최신 기능들을 다룹니다.
+- **`연습 문제` / `practice-exercises`**  
+  각 주제별로 연습 문제나 코딩 테스트 문제를 포함합니다.
+
+---
+
+## 최종 폴더 구조 예상:
+
+```plaintext
+JS-STUDY/
+├── basic-syntax-and-concepts/
+│   ├── 00-hello-world.js
+│   ├── 01-alert.js
+│   ├── 02-semicolon.js
+├── variables-and-data-types/
+│   ├── 00-number.js
+│   ├── 01-string.js
+│   ├── 02-boolean.js
+│   ├── 03-let.js
+│   ├── 04-const.js
+├── operators-and-control-flow/
+│   ├── 00-arithmetic-operators.js
+│   ├── 01-logical-operators.js
+│   ├── 02-if-else.js
+│   ├── 03-switch.js
+│   ├── 04-loops.js
+├── functions-and-scope/
+│   ├── 00-functions.js
+│   ├── 01-arrow-functions.js
+│   ├── 02-block-scope.js
+│   ├── 03-function-scope.js
+├── objects-and-arrays/
+│   ├── 00-objects.js
+│   ├── 01-arrays.js
+│   ├── 02-array-methods.js
+├── dom-manipulation/
+│   ├── 00-dom-query-selector.js
+│   ├── 01-dom-events.js
+│   ├── 02-dom-classes.js
+├── es6-plus-features/
+│   ├── 00-let-and-const.js
+│   ├── 01-arrow-functions.js
+│   ├── 02-template-literals.js
+│   ├── 03-modules.js
+├── practice-exercises/
+│   ├── 00-basic-exercises.js
+│   ├── 01-intermediate-exercises.js
+└── README.md
+```
