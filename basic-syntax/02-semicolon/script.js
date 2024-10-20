@@ -7,5 +7,6 @@ let anotherMessage = "This works without semicolon";
 console.log(anotherMessage); // 이 줄은 ASI(자동 세미콜론 삽입)로 처리된다.
 
 // 오류 예시 - 두 문장을 한 줄에 작성했을 때 (주석 처리함 - 실행 시 오류 발생)
-// let testMessage = "This will cause an error" console.log(testMessage) // SyntaxError 발생
+// let testMessage = "This will cause an error" console.log(testMessage)
+// SyntaxError 발생
 // 콘솔 출력 결과 :  Uncaught SyntaxError: Unexpected identifier 'console' (at script.js:11:46)
