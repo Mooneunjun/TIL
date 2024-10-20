@@ -8,4 +8,4 @@ let isTired = false;
 let isGreater = 10 > 5; // true
 let isSmaller = 5 > 10; // false
 
-console.log(isJavaScriptFun, isGreater, isSmaller);
+console.log(isJavaScriptFun, isGreater, isSmaller); // true true false

@@ -15,4 +15,4 @@ let difference = negativeInt - pi;
 let product = positiveInt * 2;
 let quotient = pi / 2;
 
-console.log(sum, difference, product, quotient);
+console.log(sum, difference, product, quotient); // 13.14 -11.14 20 1.57
