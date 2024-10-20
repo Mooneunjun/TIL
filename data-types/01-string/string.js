@@ -2,7 +2,7 @@
 
 // 문자열 선언
 let greeting = "Hello";
-let name = "World";
+let name = 'World';
 
 // 문자열 더하기 (이어붙이기)
 let message = greeting + " " + name;
