@@ -81,41 +81,67 @@ JavaScript 학습에 필요한 개념과 예제들을 다음과 같은 카테고
 ```plaintext
 JS-STUDY/
 ├── basic-syntax-and-concepts/
-│   ├── 00-hello-world.js
-│   ├── 01-alert.js
-│   ├── 02-semicolon.js
+│   ├── 00-hello-world/
+│   │   ├── hello-world.js
+│   ├── 01-alert/
+│   │   ├── alert.js
+│   ├── 02-semicolon/
+│   │   ├── semicolon.js
 ├── variables-and-data-types/
-│   ├── 00-number.js
-│   ├── 01-string.js
-│   ├── 02-boolean.js
-│   ├── 03-let.js
-│   ├── 04-const.js
+│   ├── 00-number/
+│   │   ├── number.js
+│   ├── 01-string/
+│   │   ├── string.js
+│   ├── 02-boolean/
+│   │   ├── boolean.js
+│   ├── 03-let/
+│   │   ├── let.js
+│   ├── 04-const/
+│   │   ├── const.js
+│   ├── 05-exercises/
+│   │   ├── variables-exercises.js
 ├── operators-and-control-flow/
-│   ├── 00-arithmetic-operators.js
-│   ├── 01-logical-operators.js
-│   ├── 02-if-else.js
-│   ├── 03-switch.js
-│   ├── 04-loops.js
+│   ├── 00-arithmetic-operators/
+│   │   ├── arithmetic-operators.js
+│   ├── 01-logical-operators/
+│   │   ├── logical-operators.js
+│   ├── 02-if-else/
+│   │   ├── if-else.js
+│   ├── 03-switch/
+│   │   ├── switch.js
+│   ├── 04-loops/
+│   │   ├── loops.js
 ├── functions-and-scope/
-│   ├── 00-functions.js
-│   ├── 01-arrow-functions.js
-│   ├── 02-block-scope.js
-│   ├── 03-function-scope.js
+│   ├── 00-functions/
+│   │   ├── functions.js
+│   ├── 01-arrow-functions/
+│   │   ├── arrow-functions.js
+│   ├── 02-block-scope/
+│   │   ├── block-scope.js
+│   ├── 03-function-scope/
+│   │   ├── function-scope.js
 ├── objects-and-arrays/
-│   ├── 00-objects.js
-│   ├── 01-arrays.js
-│   ├── 02-array-methods.js
+│   ├── 00-objects/
+│   │   ├── objects.js
+│   ├── 01-arrays/
+│   │   ├── arrays.js
+│   ├── 02-array-methods/
+│   │   ├── array-methods.js
 ├── dom-manipulation/
-│   ├── 00-dom-query-selector.js
-│   ├── 01-dom-events.js
-│   ├── 02-dom-classes.js
+│   ├── 00-dom-query-selector/
+│   │   ├── dom-query-selector.js
+│   ├── 01-dom-events/
+│   │   ├── dom-events.js
+│   ├── 02-dom-classes/
+│   │   ├── dom-classes.js
 ├── es6-plus-features/
-│   ├── 00-let-and-const.js
-│   ├── 01-arrow-functions.js
-│   ├── 02-template-literals.js
-│   ├── 03-modules.js
-├── practice-exercises/
-│   ├── 00-basic-exercises.js
-│   ├── 01-intermediate-exercises.js
+│   ├── 00-let-and-const/
+│   │   ├── let-and-const.js
+│   ├── 01-arrow-functions/
+│   │   ├── arrow-functions.js
+│   ├── 02-template-literals/
+│   │   ├── template-literals.js
+│   ├── 03-modules/
+│   │   ├── modules.js
 └── README.md
 ```
