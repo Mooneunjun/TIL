@@ -98,7 +98,7 @@ JS-STUDY/
 │   │   ├── let.js
 │   ├── 04-const/
 │   │   ├── const.js
-│   ├── 05-exercises/
+│   ├── exercises/
 │   │   ├── variables-exercises.js
 ├── operators-and-control-flow/
 │   ├── 00-arithmetic-operators/
@@ -120,6 +120,8 @@ JS-STUDY/
 │   │   ├── block-scope.js
 │   ├── 03-function-scope/
 │   │   ├── function-scope.js
+│   ├── exercises/
+│   │   ├── functions-exercises.js
 ├── objects-and-arrays/
 │   ├── 00-objects/
 │   │   ├── objects.js
