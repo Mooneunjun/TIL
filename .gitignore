@@ -1,0 +1,12 @@
+# 로그 파일 무시
+*.log
+
+# 빌드 디렉토리 무시
+/dist
+
+# 환경 설정 파일 무시
+.env
+
+# 루트 디렉토리의 특정 파일 무시
+/moondevelog.html
+/moondevelog.js

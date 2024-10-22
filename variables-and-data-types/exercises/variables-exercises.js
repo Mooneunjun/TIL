@@ -32,8 +32,8 @@ console.log(userEmail); // 예상 출력: john@example.com
 // 생년월일로 1995년 8월 20일을 저장하세요.
 // 그 변수를 console.log()로 출력하세요.
 
-let birthDate = "1995-08-20";
-console.log(birthDate); // 예상 출력: 1995-08-20
+let birthDate = "1995년 8월 20일";
+console.log(birthDate); // 예상 출력: 1995년 8월 20일
 
 // 5. 변수 값 변경
 // let을 사용해 currentTemperature 변수를 선언하고 22로 할당하세요.
