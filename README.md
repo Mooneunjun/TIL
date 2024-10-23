@@ -114,6 +114,7 @@ JS-STUDY/
 ├── functions-and-scope/
 │   ├── 00-functions/
 │   │   ├── functions.js
+│   │   ├── parameter.js
 │   ├── 01-arrow-functions/
 │   │   ├── arrow-functions.js
 │   ├── 02-block-scope/
