@@ -14,7 +14,6 @@ JavaScript 학습 과정과 자료는 Velog 시리즈로도 정리하고 있습�
 
 [![Velog's GitHub stats](https://velog-readme-stats.vercel.app/api?name=moon_dev)](https://velog-readme-stats.vercel.app/api/redirect?name=moon_dev)
 
-
 ## 목차 / Contents
 
 - [학습 목록 / Study Topics](#학습-목록--study-topics)
