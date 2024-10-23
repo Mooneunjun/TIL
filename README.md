@@ -10,7 +10,8 @@ It’s a space for organizing and recording JavaScript study materials and examp
 
 JavaScript 학습 과정과 자료는 Velog 시리즈로도 정리하고 있습니다. 아래 링크를 통해 스터디 블로그 글을 볼 수 있습니다.
 
-[JavaScript 자바스크립트 시리즈 - MOON.DEVELOG](https://velog.io/@moon_dev/series/JavaScript-자바스크립트)
+[JavaScript 자바스크립트 기초 시리즈 - MOON.DEVELOG](https://velog.io/@moon_dev/series/JavaScript-자바스크립트)
+[![Velog's GitHub stats](https://velog.io/@moon_dev/series/JavaScript-자바스크립트)](https://velog.io/@moon_dev/series/JavaScript-자바스크립트)
 
 ## 목차 / Contents
 
