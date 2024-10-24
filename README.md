@@ -117,6 +117,7 @@ JS-STUDY/
 │   ├── 00-functions/
 │   │   ├── functions.js
 │   │   ├── parameter.js
+│   │   ├── return.js
 │   ├── 01-arrow-functions/
 │   │   ├── arrow-functions.js
 │   ├── 02-block-scope/
@@ -125,6 +126,7 @@ JS-STUDY/
 │   │   ├── function-scope.js
 │   ├── exercises/
 │   │   ├── functions-exercises.js
+│   │   ├── return-exercises.js
 ├── objects-and-arrays/
 │   ├── 00-objects/
 │   │   ├── objects.js
