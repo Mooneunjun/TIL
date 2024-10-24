@@ -33,3 +33,22 @@ function square(x) {
 square(3); // 출력: 9
 square(5); // 출력: 25
 square(10); // 출력: 100
+
+// 5. 파라미터 이름을 의미 있게 변경한 함수
+function printSum(num1, num2) {
+  console.log(num1 + num2);
+}
+
+printSum(10, 5); // 출력: 15
+printSum(7, 3); // 출력: 10
+
+// 6. 자기소개 정보를 출력하는 함수
+function introduce(name, birthDate, nationality, job) {
+  console.log("안녕하세요! 제 이름은 " + name + "입니다.");
+  console.log("저는 " + birthDate + "에 태어났어요.");
+  console.log("국적은 " + nationality + "이고,");
+  console.log("현재 직업은 " + job + "입니다.");
+}
+
+introduce("홍길동", "1990-01-01", "한국", "개발자");
+introduce("김영희", "1985-05-15", "미국", "디자이너");
