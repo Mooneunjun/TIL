@@ -11,3 +11,9 @@
 /moondevelog.html
 /moondevelog.js
 /moondevelog.css
+
+
+/node_modules/
+/package.json
+/package-lock.json
+/printFolderStructure.js
