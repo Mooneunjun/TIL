@@ -78,44 +78,46 @@ JavaScript 학습에 필요한 개념과 예제들을 다음과 같은 카테고
 
 ---
 
-### 현재 폴더 구조
+## 최종 폴더 구조 예상:
 
+```plaintext
 js-study
 ├── README.md
 ├── basic-syntax-and-concepts
-│ ├── 00-hello-world
-│ │ └── hello-world.html
-│ ├── 01-alert
-│ │ └── alert.html
-│ └── 02-semicolon
-│ ├── semicolon.html
-│ └── semicolon.js
+│   ├── 00-hello-world
+│   │   └── hello-world.html
+│   ├── 01-alert
+│   │   └── alert.html
+│   └── 02-semicolon
+│       ├── semicolon.html
+│       └── semicolon.js
 ├── functions-and-scope
-│ ├── 00-functions
-│ │ ├── functions.js
-│ │ ├── parameter.js
-│ │ └── return.js
-│ └── exercises
-│ ├── functions-exercises.js
-│ └── return-exercises.js
+│   ├── 00-functions
+│   │   ├── functions.js
+│   │   ├── parameter.js
+│   │   └── return.js
+│   └── exercises
+│       ├── functions-exercises.js
+│       └── return-exercises.js
 ├── operators-and-control-flow
-│ ├── 00-arithmetic-operators
-│ │ └── arithmetic-operations.js
-│ └── 01-boolean-algebra
-│ ├── or-operation.js
-│ ├── and-operation.js
-│ └── not-operation.js
+│   ├── 00-arithmetic-operators
+│   │   └── arithmetic-operations.js
+│   └── 01-boolean-algebra
+│       ├──  or-operation.js
+│       ├── and-operation.js
+│       └── not-operation.js
 ├── template
-│ ├── index.html
-│ └── script.js
+│   ├── index.html
+│   └── script.js
 └── variables-and-data-types
-├── 00-number
-│ └── number.js
-├── 01-string
-│ └── string.js
-├── 02-boolean
-│ └── boolean.js
-├── 03-let
-│ └── let.js
-└── exercises
-└── variables-exercises.js
+    ├── 00-number
+    │   └── number.js
+    ├── 01-string
+    │   └── string.js
+    ├── 02-boolean
+    │   └── boolean.js
+    ├── 03-let
+    │   └── let.js
+    └── exercises
+        └── variables-exercises.js
+```
