@@ -106,9 +106,6 @@ js-study
 │       ├── not-operator.js
 │       ├── or-operator.js
 │       └── string-comparison.js
-├── template
-│   ├── index.html
-│   └── script.js
 └── variables-and-data-types
     ├── 00-number
     │   └── number.js
