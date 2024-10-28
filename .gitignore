@@ -14,6 +14,7 @@
 
 
 /node_modules
+/template
 /package.json
 /package-lock.json
 /printFolderStructure.js
