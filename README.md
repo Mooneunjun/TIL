@@ -99,10 +99,13 @@ js-study
 ├── operators-and-control-flow
 │   ├── 00-arithmetic-operators
 │   │   └── arithmetic-operations.js
-│   └── 01-boolean-algebra
-│       ├──  or-operation.js
-│       ├── and-operation.js
-│       └── not-operation.js
+│   └── 01-boolean-operations
+│       ├── and-operator.js
+│       ├── comparison-operators.js
+│       ├── equality-operators.js
+│       ├── not-operator.js
+│       ├── or-operator.js
+│       └── string-comparison.js
 ├── template
 │   ├── index.html
 │   └── script.js
