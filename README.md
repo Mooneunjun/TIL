@@ -98,14 +98,11 @@ js-study
 │       └── return-exercises.js
 ├── operators-and-control-flow
 │   ├── 00-arithmetic-operators
-│   │   └── arithmetic-operations.js
-│   └── 01-boolean-operations
-│       ├── and-operator.js
-│       ├── comparison-operators.js
-│       ├── equality-operators.js
-│       ├── not-operator.js
-│       ├── or-operator.js
-│       └── string-comparison.js
+│   │   └── arithmetic-operators.js
+│   ├── 01-boolean-operators
+│   │   └── boolean-operators.js
+│   └── 02-typeof-operators
+│       └── typeof-operators.js
 └── variables-and-data-types
     ├── 00-number
     │   └── number.js
