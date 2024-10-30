@@ -112,6 +112,8 @@ js-study
     │   └── boolean.js
     ├── 03-let
     │   └── let.js
+    ├── 04-type-conversion
+    │   └── type-conversion.js
     └── exercises
         └── variables-exercises.js
 ```
