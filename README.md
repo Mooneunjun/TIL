@@ -78,6 +78,8 @@ JavaScript 학습에 필요한 개념과 예제들을 다음과 같은 카테고
 ## 🗂️ 현재 폴더 구조:
 
 ```plaintext
+
+
 js-study
 ├── README.md
 ├── basic-syntax-and-concepts
@@ -113,7 +115,10 @@ js-study
     ├── 03-let
     │   └── let.js
     ├── 04-type-conversion
-    │   └── type-conversion.js
+    │   ├── automatic-type-conversion.js
+    │   └── explicit-type-conversion.js
     └── exercises
         └── variables-exercises.js
+
+
 ```
