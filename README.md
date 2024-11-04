@@ -85,9 +85,11 @@ js-study
 │   │   └── hello-world.html
 │   ├── 01-alert
 │   │   └── alert.html
-│   └── 02-semicolon
-│       ├── semicolon.html
-│       └── semicolon.js
+│   ├── 02-semicolon
+│   │   ├── semicolon.html
+│   │   └── semicolon.js
+│   └── 04-assignment-operators
+│       └── assignment-operators.js
 ├── functions-and-scope
 │   ├── 00-functions
 │   │   ├── functions.js
