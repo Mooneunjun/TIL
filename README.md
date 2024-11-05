@@ -93,6 +93,7 @@ js-study
 ├── functions-and-scope
 │   ├── 00-functions
 │   │   ├── functions.js
+│   │   ├── optional-parameters.js
 │   │   ├── parameter.js
 │   │   └── return.js
 │   └── exercises
