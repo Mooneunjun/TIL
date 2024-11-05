@@ -94,6 +94,8 @@ js-study
 │   │   ├── optional-parameters.js
 │   │   ├── parameter.js
 │   │   └── return.js
+│   ├── 01-scope
+│   │   └── scope.js
 │   └── exercises
 │       ├── functions-exercises.js
 │       └── return-exercises.js
