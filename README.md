@@ -123,6 +123,8 @@ js-study
     │   └── explicit-type-conversion.js
     ├── 05-null-and-undefined
     │   └── null-and-undefined.js
+    ├── 06-constants
+    │   └── constants.js
     └── exercises
         └── variables-exercises.js
 ```
