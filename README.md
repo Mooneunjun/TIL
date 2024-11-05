@@ -85,11 +85,9 @@ js-study
 │   │   └── hello-world.html
 │   ├── 01-alert
 │   │   └── alert.html
-│   ├── 02-semicolon
-│   │   ├── semicolon.html
-│   │   └── semicolon.js
-│   └── 04-assignment-operators
-│       └── assignment-operators.js
+│   └── 02-semicolon
+│       ├── semicolon.html
+│       └── semicolon.js
 ├── functions-and-scope
 │   ├── 00-functions
 │   │   ├── functions.js
@@ -104,8 +102,10 @@ js-study
 │   │   └── arithmetic-operators.js
 │   ├── 01-boolean-operators
 │   │   └── boolean-operators.js
-│   └── 02-typeof-operators
-│       └── typeof-operators.js
+│   ├── 02-typeof-operators
+│   │   └── typeof-operators.js
+│   └── 04-assignment-operators
+│       └── assignment-operators.js
 └── variables-and-data-types
     ├── 00-number
     │   └── number.js
