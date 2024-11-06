@@ -106,8 +106,10 @@ js-study
 │   │   └── boolean-operators.js
 │   ├── 02-typeof-operators
 │   │   └── typeof-operators.js
-│   └── 04-assignment-operators
-│       └── assignment-operators.js
+│   ├── 04-assignment-operators
+│   │   └── assignment-operators.js
+│   └── 05-if-statements
+│       └── if-statements.js
 └── variables-and-data-types
     ├── 00-number
     │   └── number.js
