@@ -90,15 +90,14 @@ js-study
 │       └── semicolon.js
 ├── functions-and-scope
 │   ├── 00-functions
+│   │   ├── functions-exercises.js
 │   │   ├── functions.js
 │   │   ├── optional-parameters.js
 │   │   ├── parameter.js
+│   │   ├── return-exercises.js
 │   │   └── return.js
-│   ├── 01-scope
-│   │   └── scope.js
-│   └── exercises
-│       ├── functions-exercises.js
-│       └── return-exercises.js
+│   └── 01-scope
+│       └── scope.js
 ├── operators-and-control-flow
 │   ├── 00-arithmetic-operators
 │   │   └── arithmetic-operators.js
