@@ -90,11 +90,9 @@ js-study
 │       └── semicolon.js
 ├── functions-and-scope
 │   ├── 00-functions
-│   │   ├── functions-exercises.js
 │   │   ├── functions.js
 │   │   ├── optional-parameters.js
 │   │   ├── parameter.js
-│   │   ├── return-exercises.js
 │   │   └── return.js
 │   └── 01-scope
 │       └── scope.js
@@ -129,8 +127,6 @@ js-study
     │   └── explicit-type-conversion.js
     ├── 05-null-and-undefined
     │   └── null-and-undefined.js
-    ├── 06-constants
-    │   └── constants.js
-    └── exercises
-        └── variables-exercises.js
+    └── 06-constants
+        └── constants.js
 ```
