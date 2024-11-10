@@ -112,8 +112,10 @@ js-study
 │   │   └── switch-vs-if.js
 │   ├── 06-for-loop
 │   │   └── 06-for-loop.js
-│   └── 07-while-loop
-│       └── while-loop.js
+│   ├── 07-while-loop
+│   │   └── while-loop.js
+│   └── 08-break-continue
+│       └── break-continue.js
 └── variables-and-data-types
     ├── 00-number
     │   └── number.js
