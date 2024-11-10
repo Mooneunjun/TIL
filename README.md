@@ -110,8 +110,10 @@ js-study
 │   ├── 05-switch-statements
 │   │   ├── switch-statements.js
 │   │   └── switch-vs-if.js
-│   └── 06-for-loop
-│       └── 06-for-loop.js
+│   ├── 06-for-loop
+│   │   └── 06-for-loop.js
+│   └── 07-while-loop
+│       └── while-loop.js
 └── variables-and-data-types
     ├── 00-number
     │   └── number.js
