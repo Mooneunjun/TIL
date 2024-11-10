@@ -122,7 +122,7 @@ js-study
     │   └── template-strings.js
     ├── 02-boolean
     │   └── boolean.js
-    ├── 03-let
+    ├── 03-variables
     │   └── let.js
     ├── 04-type-conversion
     │   ├── automatic-type-conversion.js
@@ -130,5 +130,5 @@ js-study
     ├── 05-null-and-undefined
     │   └── null-and-undefined.js
     └── 06-constants
-        └── constants.js
+        └── const.js
 ```
