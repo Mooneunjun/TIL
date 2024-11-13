@@ -96,6 +96,11 @@ js-study
 │   │   └── return.js
 │   └── 01-scope
 │       └── scope.js
+├── objects-and-arrays
+│   ├── 00-objects
+│   │   └── 00-objects.js
+│   └── 01-object-methods
+│       └── object-methods.js
 ├── operators-and-control-flow
 │   ├── 00-arithmetic-operators
 │   │   └── arithmetic-operators.js
