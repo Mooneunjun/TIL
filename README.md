@@ -119,8 +119,10 @@ js-study
 │   │   └── 06-for-loop.js
 │   ├── 07-while-loop
 │   │   └── while-loop.js
-│   └── 08-break-continue
-│       └── break-continue.js
+│   ├── 08-break-continue
+│   │   └── break-continue.js
+│   └── 09-for-in-loop
+│       └── for-in-loop.js
 └── variables-and-data-types
     ├── 00-number
     │   └── number.js
