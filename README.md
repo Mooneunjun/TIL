@@ -9,7 +9,7 @@ JavaScript 학습 과정과 자료는 Velog 시리즈로도 정리하고 있습�
 
 [JavaScript 자바스크립트 기초 시리즈 - MOON.DEVLOG](https://velog.io/@moon_dev/series/JavaScript-자바스크립트)
 
-[![Velog's GitHub stats](https://velog-readme-stats.vercel.app/api?name=moon_dev)](https://velog-readme-stats.vercel.app/api/redirect?name=moon_dev)
+[![Velog's GitHub stats](https://velog-readme-stats.vercel.app/api?name=moon_dev)](https://velog.io/@moon_dev/series)
 
 ## 📖 목차 / Contents
 
@@ -99,8 +99,10 @@ js-study
 ├── objects-and-arrays
 │   ├── 00-objects
 │   │   └── 00-objects.js
-│   └── 01-object-methods
-│       └── object-methods.js
+│   ├── 01-object-methods
+│   │   └── object-methods.js
+│   └── 02-date-object
+│       └── date-object.js
 ├── operators-and-control-flow
 │   ├── 00-arithmetic-operators
 │   │   └── arithmetic-operators.js
