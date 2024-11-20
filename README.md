@@ -79,80 +79,35 @@ JavaScript 학습에 필요한 개념과 예제들을 다음과 같은 카테고
 
 ```plaintext
 js-study
-├── README.md
 ├── basic-syntax-and-concepts
 │   ├── 00-hello-world
-│   │   └── hello-world.html
 │   ├── 01-alert
-│   │   └── alert.html
 │   └── 02-semicolon
-│       ├── semicolon.html
-│       └── semicolon.js
 ├── functions-and-scope
 │   ├── 00-functions
-│   │   ├── README.md
-│   │   ├── functions.js
-│   │   └── return.js
 │   └── 01-scope
-│       ├── README.md
-│       └── scope.js
 ├── objects-and-arrays
 │   ├── 00-objects
-│   │   ├── 00-objects.js
-│   │   └── README.md
 │   ├── 01-object-methods
-│   │   ├── README.md
-│   │   └── object-methods.js
 │   ├── 02-date-object
-│   │   ├── README.md
-│   │   └── date-object.js
 │   └── 03-arrays
-│       ├── README.md
-│       └── array.js
 ├── operators-and-control-flow
 │   ├── 00-arithmetic-operators
-│   │   └── arithmetic-operators.js
 │   ├── 01-boolean-operators
-│   │   └── boolean-operators.js
 │   ├── 02-typeof-operators
-│   │   └── typeof-operators.js
 │   ├── 03-assignment-operators
-│   │   └── assignment-operators.js
 │   ├── 04-if-statements
-│   │   ├── README.md
-│   │   └── if-statements.js
 │   ├── 05-switch-statements
-│   │   ├── README.md
-│   │   ├── switch-statements.js
-│   │   └── switch-vs-if.js
 │   ├── 06-for-loop
-│   │   ├── 06-for-loop.js
-│   │   └── README.md
 │   ├── 07-while-loop
-│   │   ├── README.md
-│   │   └── while-loop.js
 │   ├── 08-break-continue
-│   │   ├── README.md
-│   │   └── break-continue.js
 │   └── 09-for-in-loop
-│       ├── README.md
-│       └── for-in-loop.js
 └── variables-and-data-types
     ├── 00-number
-    │   └── number.js
     ├── 01-string
-    │   ├── string.js
-    │   └── template-strings.js
     ├── 02-boolean
-    │   └── boolean.js
     ├── 03-variables
-    │   └── let.js
     ├── 04-type-conversion
-    │   ├── automatic-type-conversion.js
-    │   └── explicit-type-conversion.js
     ├── 05-null-and-undefined
-    │   └── null-and-undefined.js
     └── 06-constants
-        ├── README.md
-        └── const.js
 ```
