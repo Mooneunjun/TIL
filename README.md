@@ -102,7 +102,8 @@ js-study
 │   ├── 01-string
 │   ├── 02-boolean
 │   ├── 04-type-conversion
-│   └── 05-null-and-undefined
+│   ├── 05-null-and-undefined
+│   └── 06-typeof
 ├── functions-and-scope
 │   ├── 00-functions
 │   └── 01-scope
@@ -113,7 +114,6 @@ js-study
 ├── operators
 │   ├── 00-arithmetic-operators
 │   ├── 01-boolean-operators
-│   ├── 02-typeof-operators
 │   └── 03-assignment-operators
 └── variables
     ├── 00-let
