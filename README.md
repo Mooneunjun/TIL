@@ -24,24 +24,34 @@ JavaScript 학습에 필요한 개념과 예제들을 다음과 같은 카테고
 
 - **`기본 문법 및 개념` / `basic-syntax-and-concepts`**
   자바스크립트의 기본적인 실행 흐름과 개념을 다룹니다. 예를 들어 `hello world`, `alert`, `세미콜론` 등의 기본 사례를 포함합니다.
+
 - **`변수와 상수` / `variables`**
   변수 선언, 할당 및 수정 가능 여부를 포함하여 `let`, `const`, `var`와 같은 변수 선언 키워드를 다룹니다.
+
 - **`데이터 타입` / `data-types`**
   데이터 타입의 종류와 변환 방법을 다룹니다. 숫자, 문자열, 불리언, `null` 및 `undefined`에 대한 내용을 포함합니다.
+
 - **`연산자` / `operators`**
   산술, 불리언, 할당 연산자 및 `typeof`와 같은 연산자에 대한 내용을 다룹니다.
+
 - **`제어 흐름` / `control-flow`**
   조건문(`if`, `switch`), 반복문(`for`, `while`), `break`, `continue` 등을 포함하여 프로그램의 흐름을 제어하는 방법을 다룹니다.
+
 - **`함수와 스코프` / `functions-and-scope`**
   함수의 정의 및 호출 방법과 스코프(전역, 지역 및 블록 스코프)를 다룹니다.
+
 - **`객체` / `objects`**
   객체의 생성, 접근, 메서드 및 내장 객체(`Date` 포함)를 다룹니다.
+
 - **`배열` / `arrays`**
   배열의 생성, 조작 메서드(`push`, `pop` 등), 반복문과의 조합을 다룹니다.
+
 - **`es6+ 기능` / `es6-plus-features`**
   `arrow functions`, `template literals`, `destructuring`, `spread/rest` 연산자 등 최신 문법과 기능을 다룹니다.
+
 - **`DOM 조작` / `dom-manipulation`**
   DOM 요소 선택, 변경, 이벤트 처리 등을 다룹니다.
+
 - **`연습 문제` / `practice-exercises`**
   각 주제에 대한 연습 문제를 제공하며, 코딩 테스트 문제를 포함합니다.
 
