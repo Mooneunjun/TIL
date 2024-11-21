@@ -106,7 +106,9 @@ js-study
 │   └── 06-typeof
 ├── functions-and-scope
 │   ├── 00-functions
-│   └── 01-scope
+│   ├── 01-return
+│   ├── 02-parameter
+│   └── 03-scope
 ├── objects
 │   ├── 00-objects
 │   ├── 01-object-methods
