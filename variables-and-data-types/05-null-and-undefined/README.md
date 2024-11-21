@@ -6,7 +6,7 @@
 
 ### `null`과 `undefined`의 의미
 
-[alt text](https://velog.velcdn.com/images/moon_dev/post/62fb1041-5b18-42d5-b5c5-425d33833a29/image.png)
+!https://velog.velcdn.com/images/moon_dev/post/62fb1041-5b18-42d5-b5c5-425d33833a29/image.png
 
 간단히 말하면, **`undefined`**는 변수가 선언되었으나 **아직 값이 할당되지 않은 상태**를 나타낸다. 반면에, **`null`**은 변수에 값이 **'의도적으로' 없다는 것을 명시적으로 표현**할 때 사용된다.
 
