@@ -85,18 +85,18 @@ JavaScript 학습에 필요한 개념과 예제들을 다음과 같은 카테고
 ```plaintext
 js-study
 ├── arrays
-│   └── 03-arrays
+│   └── 00-arrays
 ├── basic-syntax-and-concepts
 │   ├── 00-hello-world
 │   ├── 01-alert
 │   └── 02-semicolon
 ├── control-flow
-│   ├── 04-if-statements
-│   ├── 05-switch-statements
-│   ├── 06-for-loop
-│   ├── 07-while-loop
-│   ├── 08-break-continue
-│   └── 09-for-in-loop
+│   ├── 00-if-statements
+│   ├── 01-switch-statements
+│   ├── 02-for-loop
+│   ├── 03-while-loop
+│   ├── 04-break-continue
+│   └── 05-for-in-loop
 ├── data-types
 │   ├── 00-number
 │   ├── 01-string
@@ -106,8 +106,6 @@ js-study
 ├── functions-and-scope
 │   ├── 00-functions
 │   └── 01-scope
-├── node_modules
-│   └── ignore
 ├── objects
 │   ├── 00-objects
 │   ├── 01-object-methods
@@ -117,8 +115,7 @@ js-study
 │   ├── 01-boolean-operators
 │   ├── 02-typeof-operators
 │   └── 03-assignment-operators
-├── template
 └── variables
-    ├── 03-variables
-    └── 06-constants
+    ├── 00-let
+    └── 01-const
 ```
