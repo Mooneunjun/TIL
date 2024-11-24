@@ -1,5 +1,3 @@
-# [JavaScript] 배열 메소드 
-
 > 자바스크립트에서 배열을 안전하고 효과적으로 다루려면 **배열 메서드**를 잘 활용해야 한다. 이번 글에서는 배열을 다룰 때 자주 사용하는 메서드들을 정리해본다. 특히, **splice**, **shift**, **pop**, **unshift**, **push**와 같이 배열의 요소를 추가, 삭제, 수정할 때 활용되는 메서드들을 중심으로 다룬다.
 
 ---
@@ -411,12 +409,14 @@ console.log(reversedBrands); // ["Kakao", "Naver", "Kakao", "Google"]
 
 ---
 
-배열을 다룰 때는 다양한 메서드를 활용하면 작업을 훨씬 더 간결하고 효율적으로 처리할 수 있다.
+## 요약
 
-이번에 다룬 `splice`, `shift`, `pop`, `unshift`, `push`와 같은 기본 메서드뿐만 아니라,
-
-`indexOf`, `lastIndexOf`, `includes`, `reverse` 같은 값 탐색 및 조작 메서드도 알고 있으면 실전에서 유용하게 활용할 수 있다.
-
-이 메서드들을 잘 이해하고 익혀두면 배열과 관련된 대부분의 작업을 쉽게 처리할 수 있을 것이다.
-
-**그리고...** 사실 이 밖에도 배열이 가지고 있는 유용한 메소드들이 다양하게 있는데. 더 많은 내용을 알고싶다면, [이 링크](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Array)를 참고!
+> 배열을 다룰 때는 다양한 메서드를 활용하면 작업을 훨씬 더 간결하고 효율적으로 처리할 수 있다.
+>
+> 이번에 다룬 `splice`, `shift`, `pop`, `unshift`, `push`와 같은 기본 메서드뿐만 아니라,
+>
+> `indexOf`, `lastIndexOf`, `includes`, `reverse` 같은 값 탐색 및 조작 메서드도 알고 있으면 실전에서 유용하게 활용할 수 있다.
+>
+> 이 메서드들을 잘 이해하고 익혀두면 배열과 관련된 대부분의 작업을 쉽게 처리할 수 있을 것이다.
+>
+> **그리고...** 사실 이 밖에도 배열이 가지고 있는 유용한 메소드들이 다양하게 있는데. 더 많은 내용을 알고싶다면, [이 링크](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Array)를 참고!
