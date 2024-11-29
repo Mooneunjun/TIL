@@ -1,5 +1,7 @@
 // 숫자 자료형 (Number)
 
+// 숫자 자료형은 정수, 소수, 지수, 16진수, 8진수, 2진수 등 다양한 형태로 표현할 수 있습니다.
+
 // 정수 (Integer)
 let positiveInt = 10; // 양의 정수
 let negativeInt = -8; // 음의 정수
