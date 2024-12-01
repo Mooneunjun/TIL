@@ -83,7 +83,8 @@ JavaScript 학습에 필요한 개념과 예제들을 다음과 같은 카테고
 js-study
 ├── array
 │   ├── 00-array
-│   └── 01-array-methods
+│   ├── 01-array-methods
+│   └── 03-multidimensional-array
 ├── basic-syntax-and-concepts
 │   ├── 00-hello-world
 │   ├── 01-alert
@@ -94,7 +95,8 @@ js-study
 │   ├── 02-for-loop
 │   ├── 03-while-loop
 │   ├── 04-break-continue
-│   └── 05-for-in-loop
+│   ├── 05-for-in-loop
+│   └── 06-for-of-loop
 ├── data-types
 │   ├── 00-number
 │   ├── 01-string
