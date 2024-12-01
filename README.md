@@ -19,7 +19,6 @@ TIL/
 - [📚 학습목록 (Study Topics)](https://github.com/Mooneunjun/TIL?tab=readme-ov-file#-%ED%95%99%EC%8A%B5%EB%AA%A9%EB%A1%9D-study-topics)
 - [📜 규칙 (Rules)](https://github.com/Mooneunjun/TIL?tab=readme-ov-file#-%EA%B7%9C%EC%B9%99-rules)
 - [🖋️ TIL 커밋 메시지 컨벤션 (Commit Conventions)](https://github.com/Mooneunjun/TIL?tab=readme-ov-file#%EF%B8%8F-til-%EC%BB%A4%EB%B0%8B-%EB%A9%94%EC%8B%9C%EC%A7%80-%EC%BB%A8%EB%B2%A4%EC%85%98-commit-conventions)
-- [📂 폴더명 규칙 (Folder Naming Rules)](https://github.com/Mooneunjun/TIL?tab=readme-ov-file#-%ED%8F%B4%EB%8D%94%EB%AA%85-%EA%B7%9C%EC%B9%99-folder-naming-rules)
 - [🔗 참고 자료](https://github.com/Mooneunjun/TIL?tab=readme-ov-file#-%EC%B0%B8%EA%B3%A0-%EC%9E%90%EB%A3%8C)
 
 ---
@@ -40,6 +39,8 @@ TIL/
    - 각 주제의 개념을 이해하기 쉽도록 예제 코드를 간결하게 작성합니다.
 4. **확장된 내용은 별도 파일로 분리**
    - 깊이 있는 학습이 필요한 경우 내용을 별도의 파일로 나누어 관리합니다.
+5. **폴더명 규칙**
+   - 폴더 이름은 소문자와 하이픈(-)을 사용하여 명확하게 작성합니다.
 
 ---
 
@@ -88,12 +89,6 @@ TIL/
    - 예: `Add`, `Fix`, `Refactor`, `Remove`.
 3. **이슈 번호 연결**
    - 필요할 경우 메시지 끝에 `#이슈번호`를 명시합니다.
-
----
-
-## 📂 폴더명 규칙 (Folder Naming Rules)
-
-폴더 이름은 소문자와 하이픈(-)을 사용하여 명확하게 작성합니다.
 
 ---
 
