@@ -26,7 +26,7 @@ TIL/
 
 ## 📚 학습목록 (Study Topics)
 
-### 1. JavaScript
+### [1. JavaScript](https://github.com/Mooneunjun/TIL/tree/master/JavaScript)
 
 ---
 
