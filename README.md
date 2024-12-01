@@ -16,10 +16,10 @@ TIL/
 
 ## 📖 목차 / Contents
 
-- [📚 학습목록 (Study Topics)](https://github.com/Mooneunjun/TIL?tab=readme-ov-file#-%ED%95%99%EC%8A%B5%EB%AA%A9%EB%A1%9D--study-topics)
-- [📜 규칙 (Rules)](https://github.com/Mooneunjun/TIL?tab=readme-ov-file#-%EA%B7%9C%EC%B9%99--rules)
-- [🖋️ TIL 커밋 메시지 컨벤션 (Commit Conventions)](#🖋️-til-커밋-메시지-컨벤션-commit-conventions)
-- [📂 폴더명 규칙 (Folder Naming Rules)](https://github.com/Mooneunjun/TIL?tab=readme-ov-file#-%ED%8F%B4%EB%8D%94%EB%AA%85-%EA%B7%9C%EC%B9%99--folder-naming-rules)
+- [📚 학습목록 (Study Topics)](https://github.com/Mooneunjun/TIL?tab=readme-ov-file#-%ED%95%99%EC%8A%B5%EB%AA%A9%EB%A1%9D-study-topics)
+- [📜 규칙 (Rules)](https://github.com/Mooneunjun/TIL?tab=readme-ov-file#-%EA%B7%9C%EC%B9%99-rules)
+- [🖋️ TIL 커밋 메시지 컨벤션 (Commit Conventions)](https://github.com/Mooneunjun/TIL?tab=readme-ov-file#%EF%B8%8F-til-%EC%BB%A4%EB%B0%8B-%EB%A9%94%EC%8B%9C%EC%A7%80-%EC%BB%A8%EB%B2%A4%EC%85%98-commit-conventions)
+- [📂 폴더명 규칙 (Folder Naming Rules)](https://github.com/Mooneunjun/TIL?tab=readme-ov-file#-%ED%8F%B4%EB%8D%94%EB%AA%85-%EA%B7%9C%EC%B9%99-folder-naming-rules)
 - [🔗 참고 자료](https://github.com/Mooneunjun/TIL?tab=readme-ov-file#-%EC%B0%B8%EA%B3%A0-%EC%9E%90%EB%A3%8C)
 
 ---
