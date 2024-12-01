@@ -198,3 +198,160 @@ console.log(numA === numB); // 출력: true
 ## 요약
 
 > 지수 표기법: e를 사용해 큰 수나 작은 수를 간결하게 표현.1e3 = 1 _ 10^3, 1e-3 = 1 _ 10^-3진법 표현:16진수: 0x로 시작. (예: 0x1f → 31)8진수: 0o로 시작. (예: 0o37 → 31)2진수: 0b로 시작. (예: 0b11111 → 31)숫자 표현 방식은 상황에 맞게 활용하며, 특히 큰 수나 작은 수를 다룰 때 지수 표기법이 유용하다. 진법 표기는 비트 연산, 색상 코드 등에서 자주 활용된다.
+
+---
+
+# 숫자형 메소드: toFixed와 toString
+
+> 자바스크립트의 숫자는 객체로 다뤄지기 때문에 다양한 메소드를 사용할 수 있다. 이 중에서도 실무에서 자주 사용되는 두 가지 메소드를 정리했다: toFixed와 toString.
+
+---
+
+## `toFixed` 메소드
+
+### 기능
+
+`toFixed`는 숫자의 **소수점 아래 자릿수를 고정**하는 데 사용된다.
+
+- 파라미터로 원하는 자릿수(0~100)를 전달하면, 해당 자릿수까지 표시하고 남는 자릿수는 반올림된다.
+- 결과는 **문자열**로 반환되므로 주의가 필요하다.
+
+---
+
+### 기본 사용법
+
+```jsx
+const myNumber = 0.3591;
+
+// 소수점 아래 3자리까지 고정
+const fixedNumber = myNumber.toFixed(3);
+console.log(fixedNumber); // 출력: "0.359"
+
+// 자릿수 초과시 0으로 채움
+console.log(myNumber.toFixed(7)); // 출력: "0.3591000"
+```
+
+---
+
+### 주의사항
+
+1. **결과는 문자열**
+
+   - 반환된 값은 숫자가 아니라 문자열이다.
+
+   ```jsx
+   const result = myNumber.toFixed(3);
+   console.log(typeof result); // 출력: "string"
+   ```
+
+2. **숫자로 변환하기**
+
+   - 숫자형으로 다시 변환하려면 `Number` 함수를 사용하거나 **`+` 기호**를 활용할 수 있다.
+
+   ```jsx
+   const numResult = Number(myNumber.toFixed(3));
+   console.log(numResult); // 출력: 0.359
+
+   // 더 간단한 방법
+   const numResult2 = +myNumber.toFixed(3);
+   console.log(numResult2); // 출력: 0.359
+   ```
+
+---
+
+### 한 가지 팁
+
+- 자바스크립트에서는 어떤 값 앞에 **`+`** 기호를 붙이면 `Number()` 함수와 동일한 효과를 낸다.
+
+```jsx
+const result = +myNumber.toFixed(2);
+console.log(result); // 출력: 0.36
+```
+
+---
+
+## `toString` 메소드
+
+### 기능
+
+`toString`은 숫자를 문자열로 변환하는 메소드다.
+
+- 파라미터로 **변환할 진법(2~36)**을 전달할 수 있다.
+- 결과는 항상 **문자열**로 반환된다.
+
+---
+
+### 기본 사용법
+
+```jsx
+const number = 255;
+
+// 2진수로 변환
+console.log(number.toString(2)); // 출력: "11111111"
+
+// 16진수로 변환
+console.log(number.toString(16)); // 출력: "ff"
+```
+
+---
+
+### 활용 예
+
+- **진법 변환**숫자를 2진수, 8진수, 16진수 등으로 변환할 때 유용하다.
+  ````
+  ```jsx
+  const decimal = 42;
+
+  console.log(decimal.toString(2));  // 출력: "101010" (2진수)
+  console.log(decimal.toString(8));  // 출력: "52" (8진수)
+  console.log(decimal.toString(16)); // 출력: "2a" (16진수)
+
+  ````
+  ```
+
+  ```
+
+---
+
+### 주의사항
+
+- 반환 값은 항상 문자열이다. 이 점을 기억하고 필요하면 숫자로 변환해야 한다.
+  ```jsx
+  const binaryString = number.toString(2);
+  const binaryNumber = parseInt(binaryString, 2); // 다시 숫자로 변환
+  console.log(binaryNumber); // 출력: 255
+  ```
+
+---
+
+## 숫자형 메소드 사용 시 주의사항
+
+### 정수에 메소드 사용하기
+
+숫자형 메소드는 변수에 담지 않고 바로 사용할 수도 있다. 하지만 정수 뒤에 점(`.`)을 찍으면 **소수점**으로 오인될 수 있으므로 에러가 발생한다.
+
+```jsx
+// 이렇게 하면 에러 발생
+// console.log(255.toString(16));
+
+// 해결 방법
+console.log((255).toString(16)); // 출력: "ff" (점 두 개 사용)
+console.log((255).toString(16)); // 출력: "ff" (괄호로 감싸기)
+```
+
+---
+
+### 추천 방법
+
+- 점 두 개(`..`) 방식은 혼동을 줄 수 있으므로 **괄호**를 사용하는 방법이나 **변수에 담아서 사용하는 방식**이 더 가독성이 좋다.
+
+```jsx
+const number = 255;
+console.log(number.toString(16)); // 출력: "ff"
+```
+
+---
+
+## 요약
+
+> toFixed: 숫자의 소수점 아래 자릿수를 고정하며 결과는 문자열로 반환된다.반환된 값을 숫자로 사용하려면 Number() 또는 +를 활용.toString: 숫자를 문자열로 변환하며, 진법 변환도 가능하다.2~36 진법까지 변환 가능.정수에 메소드 호출 시 주의:점 두 개(..)를 사용하거나 괄호로 감싸야 에러를 방지할 수 있다.숫자형 메소드는 가독성과 안전성을 고려해 적절한 방식으로 활용하자.
