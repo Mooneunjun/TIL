@@ -16,21 +16,21 @@ TIL/
 
 ## 📖 목차 / Contents
 
-- [📚 학습목록 / Study Topics](#📚-학습목록--study-topics)
-- [📜 규칙 / Rules](#📜-규칙--rules)
+- [📚 학습목록 (Study Topics)](https://github.com/Mooneunjun/TIL?tab=readme-ov-file#-%ED%95%99%EC%8A%B5%EB%AA%A9%EB%A1%9D--study-topics)
+- [📜 규칙 (Rules)](https://github.com/Mooneunjun/TIL?tab=readme-ov-file#-%EA%B7%9C%EC%B9%99--rules)
 - [🖋️ TIL 커밋 메시지 컨벤션 (Commit Conventions)](#🖋️-til-커밋-메시지-컨벤션-commit-conventions)
-- [📂 폴더명 규칙 / Folder Naming Rules](#📂-폴더명-규칙--folder-naming-rules)
-- [🔗 참고 자료](#🔗-참고-자료)
+- [📂 폴더명 규칙 (Folder Naming Rules)](https://github.com/Mooneunjun/TIL?tab=readme-ov-file#-%ED%8F%B4%EB%8D%94%EB%AA%85-%EA%B7%9C%EC%B9%99--folder-naming-rules)
+- [🔗 참고 자료](https://github.com/Mooneunjun/TIL?tab=readme-ov-file#-%EC%B0%B8%EA%B3%A0-%EC%9E%90%EB%A3%8C)
 
 ---
 
-## 📚 학습목록 / Study Topics
+## 📚 학습목록 (Study Topics)
 
 ### 1. JavaScript
 
 ---
 
-## 📜 규칙 / Rules
+## 📜 규칙 (Rules)
 
 1. **하루 하나 이상의 학습 내용 기록**
    - 매일 새로운 내용을 배우고 기록하며 성장합니다.
@@ -91,7 +91,7 @@ TIL/
 
 ---
 
-## 📂 폴더명 규칙 / Folder Naming Rules
+## 📂 폴더명 규칙 (Folder Naming Rules)
 
 폴더 이름은 소문자와 하이픈(-)을 사용하여 명확하게 작성합니다.
 
