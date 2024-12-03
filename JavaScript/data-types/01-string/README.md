@@ -196,3 +196,186 @@ console.log(
 > 템플릿 문자열은 백틱(`)을 사용해 감싼 문자열이다.템플릿 문자열 내부에서는 ${ }를 통해 변수, 표현식, 함수 호출 결과를 삽입할 수 있다.덧셈 연산자(+) 없이도 문자열을 간결하게 작성할 수 있어 가독성이 좋고 코드 작성이 쉬워진다.
 
 템플릿 문자열을 활용하면 더하기 연산자 없이도 변수를 포함한 문자열을 쉽게 작성할 수 있어, 긴 문장이나 복잡한 문자열을 다룰 때 훨씬 유리하다. **백틱과 `${ }` 구문**을 기억해 두면 앞으로 코드 작성이 훨씬 편해질 것이다.
+
+---
+
+---
+
+# 문자열 메서드: 기본과 활용
+
+> 자바스크립트에서는 문자열(String)을 객체처럼 다룰 수 있다. 문자열은 배열과 유사한 기능을 제공하며, 각 문자에 접근하거나 조작할 수 있는 다양한 메서드를 제공한다. 이번 글에서는 문자열을 다루는 여러 가지 방법과 주요 메서드들을 구체적인 예제와 함께 정리한다.
+
+---
+
+## 문자열의 길이: `length` 프로퍼티
+
+**`length` 프로퍼티**는 문자열의 길이를 반환한다.
+
+문자열에 포함된 **공백도 길이에 포함**된다.
+
+### 예제
+
+```jsx
+const str = "JavaScript Rocks!"; // 19글자, 공백 포함
+
+console.log(str.length); // 출력: 19
+```
+
+### 설명
+
+- 문자열 `"JavaScript Rocks!"`의 길이는 19자이다.
+- 공백도 길이에 포함되므로, `"JavaScript Rocks!"`에서 15자 + 공백 2자 = 총 19자가 반환된다.
+
+---
+
+## 문자 접근하기: 대괄호 표기법과 `charAt`
+
+문자열의 특정 문자에 접근하려면 **대괄호 표기법(`[]`)**이나 **`charAt` 메서드**를 사용할 수 있다.
+
+### 예제
+
+```jsx
+const greeting = "Hello, World!";
+
+// 대괄호 표기법
+console.log(greeting[7]); // 출력: W
+
+// charAt 메서드
+console.log(greeting.charAt(7)); // 출력: W
+```
+
+### 설명
+
+- `"Hello, World!"` 문자열에서 `7`번 인덱스는 `'W'`이다.
+- 두 방식 모두 동일한 결과를 반환하지만, **대괄호 표기법이 더 간결**하다.
+
+### 주의
+
+문자열은 **불변(immutable)**이므로, 개별 문자를 수정할 수는 없다.
+
+```jsx
+greeting[0] = "h"; // 동작하지 않음
+console.log(greeting[0]); // 출력: H
+```
+
+---
+
+## 특정 문자 찾기: `indexOf`와 `lastIndexOf`
+
+문자열에서 특정 문자의 **첫 번째 위치**를 찾으려면 **`indexOf`** 메서드를 사용한다.
+
+문자의 **마지막 위치**를 찾으려면 **`lastIndexOf`**를 사용한다.
+
+### 예제
+
+```jsx
+const text = "abracadabra";
+
+// 첫 번째 위치 찾기
+console.log(text.indexOf("a")); // 출력: 0
+
+// 마지막 위치 찾기
+console.log(text.lastIndexOf("a")); // 출력: 10
+
+// 없는 문자를 찾으면 -1 반환
+console.log(text.indexOf("z")); // 출력: -1
+```
+
+### 설명
+
+- `"abracadabra"`에서 `'a'`의 첫 번째 위치는 `0`번 인덱스이다.
+- `'a'`의 마지막 위치는 문자열의 끝에서 세 번째인 `10`번 인덱스이다.
+- 문자열에 없는 문자를 찾으면 *`*1\*`이 반환된다.
+
+---
+
+## 대소문자 변환: `toUpperCase`와 `toLowerCase`
+
+문자열의 대소문자를 변환하는 두 가지 메서드:
+
+- **`toUpperCase`**: 문자열을 모두 대문자로 변환.
+- **`toLowerCase`**: 문자열을 모두 소문자로 변환.
+
+### 예제
+
+```jsx
+const mixedCase = "JaVaScRiPt";
+
+// 대문자로 변환
+console.log(mixedCase.toUpperCase()); // 출력: JAVASCRIPT
+
+// 소문자로 변환
+console.log(mixedCase.toLowerCase()); // 출력: javascript
+```
+
+### 설명
+
+- `"JaVaScRiPt"` 문자열을 대문자로 변환하면 `"JAVASCRIPT"`가 반환된다.
+- 같은 문자열을 소문자로 변환하면 `"javascript"`가 반환된다.
+
+---
+
+## 공백 제거: `trim`
+
+문자열의 양 끝에 있는 공백을 제거하려면 **`trim`** 메서드를 사용한다.
+
+문자열 내부의 공백은 제거되지 않는다.
+
+### 예제
+
+```jsx
+const padded = "   Learn JavaScript   ";
+
+// 공백 제거
+console.log(padded.trim()); // 출력: "Learn JavaScript"
+
+// 내부 공백은 그대로 유지
+console.log("   L e a r n   ".trim()); // 출력: "L e a r n"
+```
+
+### 설명
+
+- `" Learn JavaScript "`의 양쪽 공백이 제거되어 `"Learn JavaScript"`로 반환된다.
+- 내부 공백은 제거되지 않으므로 `"L e a r n"`은 공백이 그대로 유지된다.
+
+---
+
+## 부분 문자열 추출: `slice`
+
+**`slice`** 메서드는 문자열의 일부를 추출하여 반환한다.
+
+**시작 인덱스**와 **종료 인덱스(포함하지 않음)**를 매개변수로 받는다.
+
+### 예제
+
+```jsx
+const phrase = "Frontend Development";
+
+// 0번 인덱스부터 8번 인덱스 직전까지 추출
+console.log(phrase.slice(0, 8)); // 출력: Frontend
+
+// 시작 인덱스만 전달하면 끝까지 추출
+console.log(phrase.slice(9)); // 출력: Development
+
+// 인덱스를 생략하면 전체 문자열 반환
+console.log(phrase.slice()); // 출력: Frontend Development
+```
+
+### 설명
+
+- `"Frontend Development"`의 `0~7` 인덱스를 추출하면 `"Frontend"`가 반환된다.
+- 시작 인덱스 `9`만 전달하면 `"Development"`가 반환된다.
+- 매개변수를 생략하면 문자열 전체를 반환한다.
+
+---
+
+## 요약
+
+- **`length`**: 문자열의 길이를 반환.
+- **`charAt` / 대괄호 표기법**: 특정 인덱스의 문자에 접근.
+- **`indexOf` / `lastIndexOf`**: 특정 문자의 첫 번째/마지막 위치를 반환. 없으면 `1`.
+- **`toUpperCase` / `toLowerCase`**: 문자열을 대문자/소문자로 변환.
+- **`trim`**: 문자열 양 끝의 공백 제거.
+- **`slice`**: 문자열의 특정 부분을 추출.
+
+문자열은 배열과 유사한 기능을 제공하면서도, 고유한 특성을 가진다. 이러한 메서드들은 문자열을 조작하고 다루는 데 매우 유용하므로, 필요할 때마다 적극적으로 활용해보자.
