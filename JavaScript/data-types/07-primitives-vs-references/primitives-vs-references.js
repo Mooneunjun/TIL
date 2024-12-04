@@ -42,4 +42,10 @@ console.log(arr2); // 출력: [1, 2, 3, 4]
 // 얕은 복사(shallow copy): 주소만 복사
 let shallowCopy = arr1;
 shallowCopy.pop(); // shallowCopy에서 요소 제거
-console.log(arr1); // 출력: [1, 2, 3] (원본
+console.log(arr1); // 출력: [1, 2, 3] (원본도 변경됨)
+
+// 깊은 복사(deep copy): 독립적인 객체 생성
+let deepCopy = JSON.parse(JSON.stringify(arr1));
+deepCopy.push(5); // deepCopy에만 값 추가
+console.log(arr1); // 출력: [1, 2, 3] (원본은 변경되지 않음)
+console.log(deepCopy); // 출력: [1, 2, 3, 5]
