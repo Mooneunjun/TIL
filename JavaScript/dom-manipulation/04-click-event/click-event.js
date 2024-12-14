@@ -1,10 +1,15 @@
 // 버튼 선택
 const myBtn = document.querySelector("#my-btn");
+const myBtn2 = document.querySelector("#my-btn2");
 
 // 클릭 이벤트 핸들러 추가
 myBtn.onclick = function () {
   console.log("Button was clicked!");
 };
+
+myBtn2.addEventListener("click", function () {
+  console.log("Button2 was clicked!");
+});
 
 // ------------------------------------------
 

@@ -1,5 +1,3 @@
-# 이벤트와 버튼 클릭
-
 > 웹 페이지에서 발생하는 대부분의 상호작용은 이벤트(event)라고 한다. 마우스를 움직이거나 키보드를 누르거나 페이지를 스크롤하는 동작 등이 모두 이벤트에 포함된다. 이 중에서도 가장 기본적이고 자주 사용되는 이벤트 중 하나는 마우스 클릭이다. 이번에는 버튼 클릭 이벤트를 처리하는 방법과 관련된 개념들을 정리한다.
 
 ---
@@ -109,6 +107,144 @@ myBtn.onclick = function () {
 - HTML과 JavaScript가 분리되어 코드의 가독성이 좋아진다.
 - 동작을 수정하거나 추가할 때 유지보수가 쉬워진다.
 - 복잡한 동작을 구현할 때도 코드의 일관성을 유지할 수 있다.
+
+---
+
+`myBtn.onclick`과 `myBtn.addEventListener("click", ...)`는 둘 다 이벤트 핸들러를 설정하는 방법이지만, **동작 방식**과 **사용성**에서 몇 가지 중요한 차이가 있다.
+
+### **1. 이벤트 핸들러의 중복**
+
+### `myBtn.onclick`
+
+- **한 번에 하나의 핸들러만 설정 가능하다**:
+  - 이전에 설정된 이벤트 핸들러가 새로 설정한 핸들러로 **덮어쓰인다**.
+  ```jsx
+  myBtn.onclick = function () {
+    console.log("First handler");
+  };
+  myBtn.onclick = function () {
+    console.log("Second handler");
+  };
+  // 출력: "Second handler" (첫 번째 핸들러는 덮어써진다)
+  ```
+
+### `myBtn.addEventListener("click", ...)`
+
+- **여러 개의 핸들러를 등록 가능하다**:
+  - 동일한 이벤트에 대해 여러 핸들러를 **중복으로 추가**할 수 있다.
+  ```jsx
+  myBtn.addEventListener("click", function () {
+    console.log("First handler");
+  });
+  myBtn.addEventListener("click", function () {
+    console.log("Second handler");
+  });
+  // 출력:
+  // "First handler"
+  // "Second handler"
+  ```
+
+---
+
+### **2. 핸들러 제거**
+
+### `myBtn.onclick`
+
+- 이벤트 핸들러를 제거하려면 `myBtn.onclick = null`로 설정한다.
+  ```jsx
+  myBtn.onclick = function () {
+    console.log("Button clicked");
+  };
+  myBtn.onclick = null; // 이벤트 핸들러 제거
+  ```
+
+### `myBtn.addEventListener("click", ...)`
+
+- 특정 핸들러를 제거하려면 **참조가 동일한 함수**를 사용하여 제거해야 한다.
+  ```jsx
+  function handleClick() {
+    console.log("Button clicked");
+  }
+  myBtn.addEventListener("click", handleClick);
+  myBtn.removeEventListener("click", handleClick); // 이벤트 핸들러 제거
+  ```
+
+---
+
+### **3. 한 번만 실행되는 이벤트**
+
+### `myBtn.onclick`
+
+- 기본적으로 이벤트는 버튼을 클릭할 때마다 실행된다.
+- `once` 옵션이 없으므로, 한 번만 실행되게 하려면 별도의 로직을 구현해야 한다.
+
+### `myBtn.addEventListener("click", ...)`
+
+- `once` 옵션을 사용하여 이벤트를 한 번만 실행하도록 설정할 수 있다.
+  ```jsx
+  myBtn.addEventListener(
+    "click",
+    function () {
+      console.log("This will run once");
+    },
+    { once: true }
+  );
+  ```
+
+---
+
+### **4. 이벤트 캡처 및 버블링 지원**
+
+### `myBtn.onclick`
+
+- 항상 **버블링 단계**에서만 작동한다.
+- 이벤트 캡처 단계에서는 동작하지 않는다.
+
+### `myBtn.addEventListener("click", ...)`
+
+- **캡처 단계**에서 이벤트를 처리하도록 설정할 수 있다.
+  ```jsx
+  myBtn.addEventListener(
+    "click",
+    function () {
+      console.log("Capture phase handler");
+    },
+    true
+  ); // true: 캡처 단계에서 실행
+  ```
+
+---
+
+### **5. 표준 준수와 유연성**
+
+### `myBtn.onclick`
+
+- 오래된 방식이며, HTML DOM Level 0 표준을 따른다.
+- 기능이 단순하지만 유연성이 부족하다.
+
+### `myBtn.addEventListener("click", ...)`
+
+- 현대적인 방식이며, HTML DOM Level 2 이벤트 표준을 따른다.
+- 이벤트 타입, 옵션 등 **더 많은 기능과 유연성**을 제공한다.
+
+---
+
+### **언제 어떤 방식을 사용해야 하나?**
+
+| 상황                                  | 추천 방식                |
+| ------------------------------------- | ------------------------ |
+| 단순한 이벤트 핸들러가 필요할 때      | `myBtn.onclick`          |
+| 동일 이벤트에 여러 핸들러가 필요할 때 | `myBtn.addEventListener` |
+| 이벤트를 한 번만 실행해야 할 때       | `myBtn.addEventListener` |
+| 캡처 단계에서 이벤트를 처리할 때      | `myBtn.addEventListener` |
+| 오래된 코드와의 호환성이 필요할 때    | `myBtn.onclick`          |
+
+---
+
+### **결론**
+
+- `onclick`은 단순하고 제한적인 이벤트 핸들링 방식이다.
+- `addEventListener`는 **여러 핸들러 추가**, **캡처 단계 지원**, **옵션 설정** 등 현대적인 기능을 제공하여 더 유연하고 강력한 방식이다. **새로운 코드**를 작성할 때는 가능하면 `addEventListener`를 사용하는 것이 좋다.
 
 ---
 
