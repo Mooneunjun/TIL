@@ -1,28 +1,32 @@
-// DOM 트리의 최상위 노드 (document)
-console.log("Document Node:", document);
+// DOM Tree 탐색 예제
 
-// 요소 노드 탐색
-const mainTitle = document.querySelector("#main-title");
-console.log("Main Title (Element Node):", mainTitle);
+// #content 요소 가져오기
+const content = document.querySelector("#content");
 
-// 텍스트 노드 확인
-const paragraph = document.querySelector("#paragraph");
-console.log("Paragraph Element Node:", paragraph);
-console.log("Paragraph Text Node:", paragraph.firstChild); // 텍스트 노드 접근
+// 자식 요소 탐색
+console.log("자식 요소:", content.children); // HTMLCollection [h1, ul]
+console.log("첫 번째 자식 요소:", content.firstElementChild); // <h1>...</h1>
+console.log("마지막 자식 요소:", content.lastElementChild); // <ul>...</ul>
 
-// 부모 노드와 자식 노드
-console.log("Parent of #paragraph:", paragraph.parentNode); // 부모 노드
-console.log("Children of #list:", document.querySelector("#list").children); // 자식 노드
+// 부모 요소 탐색
+const title = document.querySelector("#title");
+console.log("부모 요소:", title.parentElement); // <div id="content">...</div>
 
-// 형제 노드
-console.log("Next Sibling of #paragraph:", paragraph.nextElementSibling); // 형제 노드
+// 형제 요소 탐색
+const list = document.querySelector("#list");
+console.log("이전 형제 요소:", list.previousElementSibling); // <h1>...</h1>
+console.log("다음 형제 요소:", list.nextElementSibling); // null
 
-// DOM 트리 탐색
-const listItems = document.querySelectorAll("#list > li");
-listItems.forEach((item, index) => {
-  console.log(`List Item ${index + 1}:`, item);
-});
+// 모든 노드 탐색
+console.log("모든 자식 노드:", content.childNodes); // NodeList [Text, h1, Text, ul, Text]
+console.log("첫 번째 자식 노드:", content.firstChild); // Text (줄바꿈 및 공백)
+console.log("마지막 자식 노드:", content.lastChild); // Text (줄바꿈 및 공백)
 
-// DOM 트리의 노드 타입 확인
-console.log("Node Type of #main-title:", mainTitle.nodeType); // 요소 노드
-console.log("Node Type of Paragraph Text Node:", paragraph.firstChild.nodeType); // 텍스트 노드
+// 노드 타입 확인
+console.log("노드 타입 (#title):", title.nodeType); // 1 (요소 노드)
+console.log("노드 타입 (첫 번째 자식 노드):", content.firstChild.nodeType); // 3 (텍스트 노드)
+
+// parentNode와 parentElement 비교
+const item1 = document.querySelector("#item1");
+console.log("부모 노드 (parentNode):", item1.parentNode); // <ul>...</ul>
+console.log("부모 요소 노드 (parentElement):", item1.parentElement); // <ul>...</ul>
