@@ -1,3 +1,5 @@
+# 웹 브라우저와 객체
+
 > JavaScript는 원래 웹 브라우저를 다루기 위해 등장한 프로그래밍 언어다. JavaScript에서 브라우저는 window 객체로 표현된다. 이 window 객체를 통해 브라우저의 정보를 얻거나 제어할 수 있다. 동시에, window는 JavaScript에서 전역 객체(Global Object)로도 작동한다.
 
 ---
