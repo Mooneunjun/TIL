@@ -153,3 +153,172 @@ DOM 프로퍼티로 접근할 수 없는 속성도 DOM 메서드를 통해 제�
 HTML 속성과 DOM 프로퍼티는 밀접하게 연결되어 있지만, DOM 메서드를 통해 표준 및 비표준 속성을 모두 다룰 수 있다.
 
 `getAttribute`, `setAttribute`, `removeAttribute` 메서드를 활용해 HTML 속성을 추가, 수정, 삭제하며 유연하게 DOM을 조작할 수 있다.
+
+# HTML 비표준 속성 다루기
+
+> HTML 속성은 주로 표준 속성을 활용하지만, 때로는 비표준 속성이 필요한 경우도 있다. 이 글에서는 비표준 속성의 활용법과, 더 안전한 대안인 data-\* 속성과 dataset 프로퍼티를 정리한다.
+
+---
+
+## **HTML 속성과 비표준 속성**
+
+HTML 태그에 정의된 속성들은 대부분 표준 속성으로, HTML 표준에서 정의한 규칙에 따라 사용된다. 그러나 HTML 표준 속성만으로는 처리하기 어려운 상황에서 **비표준 속성**이 유용할 때가 있다.
+
+아래 예시는 표준이 아닌 속성인 `field`와 `status`를 사용한 코드다.
+
+### **예시 코드**
+
+```html
+<p>할 일: <b field="title"></b></p>
+<p>담당자: <b field="manager"></b></p>
+<p>상태: <b field="status"></b></p>
+<div>
+  상태 변경:
+  <button class="btn" status="대기중">대기중</button
+  ><button class="btn" status="진행중">진행중</button
+  ><button class="btn" status="완료">완료</button>
+</div>
+```
+
+---
+
+## **비표준 속성 활용 방법**
+
+### **1. 선택자로 활용**
+
+CSS 선택자나 JavaScript의 `querySelector`를 사용해 비표준 속성을 선택할 수 있다.
+
+```jsx
+const fields = document.querySelectorAll("[field]");
+console.log(fields);
+```
+
+CSS 선택자는 `[속성이름]` 형태로 작성하며, 특정 값을 가진 태그를 선택하려면 `[속성이름="값"]` 형태를 사용할 수 있다.
+
+---
+
+### **2. 데이터 표시**
+
+객체 데이터를 기반으로 비표준 속성을 활용해 각 태그에 데이터를 매핑할 수 있다.
+
+```jsx
+const fields = document.querySelectorAll("[field]");
+const task = {
+  title: "프로젝트 기획",
+  manager: "Alice, Bob",
+  status: "",
+};
+
+for (let tag of fields) {
+  const field = tag.getAttribute("field"); // 속성값 가져오기
+  tag.textContent = task[field]; // 객체 값 매핑
+}
+```
+
+---
+
+### **3. 속성 기반으로 스타일 및 데이터 변경**
+
+비표준 속성을 이용해 스타일을 변경하거나, 이벤트를 처리할 수 있다.
+
+```jsx
+const btns = document.querySelectorAll(".btn");
+for (let btn of btns) {
+  const status = btn.getAttribute("status");
+  btn.onclick = function () {
+    fields[2].textContent = status; // 상태 변경
+    fields[2].setAttribute("status", status); // 속성 값 업데이트
+  };
+}
+```
+
+---
+
+## **비표준 속성의 위험성과 대안**
+
+### **비표준 속성의 문제**
+
+1. **표준 등록 가능성**
+
+   비표준 속성이 표준으로 등록되면, 기존 코드와 충돌하거나 의도하지 않은 동작을 유발할 수 있다.
+
+2. **예측 불가능성**
+
+   브라우저에서 비표준 속성을 다르게 처리할 가능성이 있다.
+
+---
+
+### **안전한 대안: `data-*` 속성**
+
+`data-*` 속성은 HTML5에서 도입된 속성으로, 비표준 데이터를 안전하게 다룰 수 있는 방법이다.
+
+`data-`로 시작하는 모든 속성은 `dataset` 객체로 관리되며, JavaScript에서 안전하게 다룰 수 있다.
+
+---
+
+### **예시 코드**
+
+### **HTML 구조**
+
+```html
+<p>할 일: <b data-field="title"></b></p>
+<p>담당자: <b data-field="manager"></b></p>
+<p>상태: <b data-field="status"></b></p>
+<div>
+  상태 변경:
+  <button class="btn" data-status="대기중">대기중</button
+  ><button class="btn" data-status="진행중">진행중</button
+  ><button class="btn" data-status="완료">완료</button>
+</div>
+```
+
+### **JavaScript 코드**
+
+```jsx
+const fields = document.querySelectorAll("[data-field]");
+const task = {
+  title: "프로젝트 기획",
+  manager: "Alice, Bob",
+  status: "",
+};
+
+// 태그와 데이터를 매핑
+for (let tag of fields) {
+  const field = tag.dataset.field; // dataset으로 속성 접근
+  tag.textContent = task[field];
+}
+
+// 상태 변경 버튼 처리
+const btns = document.querySelectorAll(".btn");
+for (let btn of btns) {
+  const status = btn.dataset.status; // dataset으로 속성 접근
+  btn.onclick = function () {
+    fields[2].textContent = status;
+    fields[2].dataset.status = status;
+  };
+}
+```
+
+---
+
+### **dataset 사용의 장점**
+
+1. **표준 준수**
+
+   `data-*` 속성은 HTML5 표준에 포함되므로 안전하다.
+
+2. **간결한 접근**
+
+   JavaScript에서 `dataset` 프로퍼티를 통해 속성에 쉽게 접근할 수 있다.
+
+3. **유연성**
+
+   비표준 속성을 사용할 때의 문제를 방지하면서, 다양한 데이터 요구를 처리할 수 있다.
+
+---
+
+## **요약**
+
+비표준 속성은 상황에 따라 유용하게 사용될 수 있지만, HTML 표준 등록으로 인한 예기치 못한 문제를 유발할 가능성도 있다.
+
+따라서 비표준 속성을 사용해야 할 경우에는 `data-*` 형식을 사용하는 것이 권장된다. `dataset` 프로퍼티를 활용해 데이터를 다루면, 가독성과 안전성을 모두 확보할 수 있다.
