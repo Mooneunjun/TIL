@@ -4,13 +4,13 @@
 
 ---
 
-### **이벤트 핸들러란?**
+## **이벤트 핸들러란?**
 
 이벤트 핸들러는 특정 이벤트가 발생했을 때 실행되는 함수다. 예를 들어, 버튼을 클릭하거나 키보드를 누르는 등의 동작에 반응하여 특정 코드를 실행하려면 이벤트 핸들러를 등록해야 한다.
 
 ---
 
-### **이벤트 핸들러 등록 방법**
+## **이벤트 핸들러 등록 방법**
 
 JavaScript에서 이벤트 핸들러를 등록하는 주요 방법에는 다음이 있다:
 
@@ -64,7 +64,7 @@ button.addEventListener("click", handleClick2);
 
 ---
 
-### **`addEventListener` 메서드의 작동 원리**
+## **`addEventListener` 메서드의 작동 원리**
 
 `addEventListener` 메서드는 DOM 요소에 이벤트 핸들러를 등록할 수 있는 가장 강력한 도구다.
 
@@ -113,7 +113,7 @@ button.removeEventListener("click", handleClick1);
 
 ---
 
-### **`addEventListener`의 옵션**
+## **`addEventListener`의 옵션**
 
 옵션 객체를 사용하면 이벤트의 동작을 세부적으로 제어할 수 있다.
 
@@ -126,7 +126,7 @@ button.removeEventListener("click", handleClick1);
 
 ---
 
-### 요약
+## 요약
 
 - **이벤트 핸들러**는 특정 이벤트가 발생했을 때 실행되는 함수다.
 - `addEventListener`는 가장 강력하고 권장되는 이벤트 등록 방식이다.
