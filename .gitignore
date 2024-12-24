@@ -12,6 +12,7 @@
 
 /node_modules
 /template
+/test
 /package.json
 /package-lock.json
 /printFolderStructure.js
