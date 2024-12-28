@@ -7,9 +7,9 @@ JavaScript 학습 자료와 예제를 정리하고 기록하는 공간입니다.
 
 JavaScript 학습 과정과 자료는 Velog 시리즈로도 정리하고 있습니다. 아래 링크를 통해 스터디 블로그 글을 볼 수 있습니다.
 
-[JavaScript 자바스크립트 기초 시리즈 - MOON.DEVLOG](https://velog.io/@moon_dev/series/JavaScript-자바스크립트)
+[JavaScript 기초 시리즈 - MOON.DEVLOG](https://velog.io/@moon_dev/series/JavaScript-자바스크립트)
 
-[JavaScript 자바스크립트 심화 시리즈 - MOON.DEVLOG](https://velog.io/@moon_dev/series/JavaScript-심화)
+[JavaScript 심화 시리즈 - MOON.DEVLOG](https://velog.io/@moon_dev/series/JavaScript-심화)
 
 ## 학습 목록 / Study Topics
 
