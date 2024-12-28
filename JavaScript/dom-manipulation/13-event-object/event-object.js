@@ -14,3 +14,14 @@ button.addEventListener("click", (event) => {
   console.log("클릭한 요소:", event.target); // 클릭된 요소
   console.log("클릭 위치 - X:", event.clientX, "Y:", event.clientY); // 마우스 좌표
 });
+
+// 이벤트 전파 막기
+const parent = document.querySelector("#parent");
+const child = document.querySelector("#child");
+parent.addEventListener("click", () => {
+  console.log("부모 요소 클릭");
+});
+child.addEventListener("click", (event) => {
+  console.log("자식 요소 클릭");
+  event.stopPropagation(); // 이벤트 전파 중지
+});
