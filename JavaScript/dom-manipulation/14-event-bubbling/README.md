@@ -15,26 +15,35 @@ HTML과 CSS로 간단한 구조를 만들고, JavaScript로 각 요소에 클릭
 > 이벤트 버블링은 특정 요소에서 이벤트가 발생했을 때 해당 이벤트가 부모 요소로 전달되며 최상위 요소까지 전파되는 동작을 의미한다. 이 동작은 이벤트가 발생한 자식 요소부터 부모 요소로 "거품처럼" 올라간다고 해서 버블링(Bubbling)이라는 이름이 붙었다.
 
 1. **동작 원리**
-   - 이벤트가 발생한 요소에 등록된 이벤트 핸들러가 실행됨.
-   - 이후 동일한 이벤트 타입의 핸들러가 부모 요소에 등록되어 있으면 순차적으로 실행됨.
-   - 이 과정은 최상위 요소(`window` 객체)에 도달할 때까지 반복된다.
-2. **예제 코드**
+
+- **이벤트 발생**: 사용자가 특정 요소를 클릭하거나 동작을 수행.
+- **이벤트 실행**: 해당 요소에 등록된 이벤트 핸들러 실행.
+- **상위 요소로 전파**: 부모 요소로 이벤트가 전달되며 이벤트 핸들러가 실행됨.
+- **최상위까지 전파**: 계속 상위 요소로 이동하며 `window` 객체에 도달.
+
+버블링은 물속에서 올라오는 거품과 비슷한 동작 원리를 가지고 있어 이러한 이름이 붙었다.
+
+---
+
+1. **예제 코드**
 
 ```html
 <div id="content">
-  <div id="list"><div id="item">클릭하세요</div></div>
+  <div id="list">
+    <div id="item">Item</div>
+  </div>
 </div>
 ```
 
 ```jsx
 // 각 요소에 이벤트 핸들러 등록
-const content = document.getElementById("content");
-const list = document.getElementById("list");
-const item = document.getElementById("item");
+const content = document.querySelector("#content");
+const list = document.querySelector("#list");
+const item = document.querySelector("#item");
 
-content.addEventListener("click", () => console.log("Content 클릭"));
-list.addEventListener("click", () => console.log("List 클릭"));
-item.addEventListener("click", () => console.log("Item 클릭"));
+content.addEventListener("click", () => console.log("Content 클릭!"));
+list.addEventListener("click", () => console.log("List 클릭!"));
+item.addEventListener("click", () => console.log("Item 클릭!"));
 ```
 
 **출력 결과:**
@@ -43,56 +52,93 @@ item.addEventListener("click", () => console.log("Item 클릭"));
 - `list` 클릭 시: `List 클릭` → `Content 클릭`
 - `content` 클릭 시: `Content 클릭`
 
+이벤트 버블링에 의해 `item`에서 시작된 이벤트가 부모인 `list`, 그리고 그 상위인 `content`로 전파되며 핸들러가 실행된다.
+
 ---
 
-### 이벤트 객체의 `target`과 `currentTarget`
+## **이벤트 객체를 활용한 정보 확인**
 
-버블링 과정에서 헷갈리기 쉬운 점은 이벤트 객체의 `target`과 `currentTarget`의 역할이다.
+이벤트 핸들러에 전달되는 이벤트 객체는 이벤트와 관련된 다양한 정보를 담고 있다. 이를 활용해 이벤트의 원래 발생 요소, 핸들러가 등록된 요소 등을 확인할 수 있다.
+
+### **주요 프로퍼티**
 
 1. **`target`**
-   - 이벤트가 최초로 발생한 요소를 가리킨다.
-   - 버블링이 발생해도 변하지 않는다.
+   - 이벤트가 실제로 발생한 요소.
+   - 예: 사용자가 클릭한 요소.
 2. **`currentTarget`**
-   - 현재 실행 중인 이벤트 핸들러가 등록된 요소를 가리킨다.
-   - 버블링 단계에 따라 변할 수 있다.
+   - 현재 실행 중인 이벤트 핸들러가 등록된 요소.
 
-**코드 예제:**
+### **예제**
 
 ```jsx
 item.addEventListener("click", (event) => {
-  console.log("Target:", event.target); // 최초 클릭된 요소
-  console.log("CurrentTarget:", event.currentTarget); // 현재 핸들러가 동작하는 요소
+  console.log("Target:", event.target); // 클릭된 실제 요소
+  console.log("Current Target:", event.currentTarget); // 현재 실행 중인 핸들러가 등록된 요소
 });
 ```
 
+**출력 결과**
+
+- `event.target`: `#item`
+- `event.currentTarget`: `#item`
+
+부모 요소의 핸들러에서도 `target`은 변하지 않고 최초의 이벤트 발생 요소를 가리킨다.
+
 ---
 
-### 이벤트 버블링 멈추기
+## **이벤트 버블링 멈추기**
 
-버블링을 멈추려면 이벤트 객체의 `stopPropagation` 메서드를 사용하면 된다.
+특정 상황에서 버블링을 멈추고 싶다면 `event.stopPropagation()` 메서드를 활용한다.
 
-1. **사용 예제**
+### **예제**
 
 ```jsx
 item.addEventListener("click", (event) => {
-  console.log("Item 클릭");
+  console.log("Item 클릭!");
   event.stopPropagation(); // 버블링 중단
 });
+
+list.addEventListener("click", () => console.log("List 클릭!"));
+content.addEventListener("click", () => console.log("Content 클릭!"));
 ```
 
-**출력 결과:**
+**출력 결과**
 
-- `item` 클릭 시: `Item 클릭`
-- `list`와 `content` 핸들러는 실행되지 않음.
+`Item`을 클릭했을 때:
 
-1. **주의점**
-   - 불필요하게 버블링을 멈추는 것은 피해야 한다.
-   - 예를 들어, 상위 요소에서 문서 전체를 대상으로 하는 이벤트 핸들러가 필요한 경우 특정 요소에서 버블링이 막히면 의도한 동작이 방해받을 수 있다.
+- `Item 클릭!`
+
+`event.stopPropagation()`에 의해 이벤트가 부모 요소로 전파되지 않는다.
+
+**주의점**
+
+- 불필요하게 버블링을 멈추는 것은 피해야 한다.
+- 예를 들어, 상위 요소에서 문서 전체를 대상으로 하는 이벤트 핸들러가 필요한 경우 특정 요소에서 버블링이 막히면 의도한 동작이 방해받을 수 있다.
 
 ---
 
-### 요약
+## **버블링을 멈추면 생길 수 있는 문제**
 
-- 이벤트 버블링은 이벤트가 발생한 요소부터 부모 요소로 전파되는 과정이다.
-- 이벤트 객체의 `target`은 최초 이벤트가 발생한 요소를, `currentTarget`은 현재 핸들러가 동작하는 요소를 나타낸다.
-- `stopPropagation`을 사용해 버블링을 멈출 수 있지만, 필요한 경우에만 사용해야 한다.
+버블링을 중단하면 부모 요소에서 처리해야 할 이벤트가 실행되지 않을 수 있다. 예를 들어, 전체 페이지에서 특정 동작을 감지하는 이벤트 핸들러가 있다면, 버블링 중단 구간에서는 의도한 동작이 실행되지 않을 수 있다.
+
+### **예제 문제**
+
+```jsx
+document.body.addEventListener("click", () => console.log("Body 클릭!"));
+
+item.addEventListener("click", (event) => {
+  console.log("Item 클릭!");
+  event.stopPropagation();
+});
+```
+
+위 코드에서 `item`을 클릭하면 `body`에 등록된 핸들러는 동작하지 않는다.
+
+---
+
+## **요약**
+
+1. **이벤트 버블링**: 이벤트가 자식 요소에서 부모 요소로 전파되는 과정.
+2. **`event.target`과 `event.currentTarget`**: 이벤트 발생 요소와 핸들러가 등록된 요소를 구분.
+3. **버블링 중단**: `event.stopPropagation()`으로 이벤트 전파를 멈출 수 있다.
+4. **주의 사항**: 버블링을 멈추는 것은 제한적으로 사용해야 하며, 이벤트 설계를 명확히 해야 한다.
