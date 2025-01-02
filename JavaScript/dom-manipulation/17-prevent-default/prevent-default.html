@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>브라우저 기본 동작 방지 예제</title>
+    <style>
+      #noRightClick {
+        padding: 20px;
+        border: 1px solid black;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Prevent Default 예제</h2>
+
+    <!-- 링크 이동 방지 -->
+    <a href="https://example.com" id="myLink">Example.com으로 이동</a
+    ><br /><br />
+
+    <!-- 체크박스로 텍스트 입력 비활성화 -->
+    <input type="checkbox" id="myCheckbox" />
+    <label for="myCheckbox">입력창 비활성화</label>
+    <input
+      type="text"
+      id="myInput"
+      placeholder="여기에 입력 가능"
+    /><br /><br />
+
+    <!-- 오른쪽 클릭 방지 -->
+    <div id="noRightClick">여기에서 오른쪽 클릭 방지</div>
+    <br /><br />
+
+    <!-- 폼 제출 방지 -->
+    <form id="myForm">
+      <input type="text" placeholder="이름 입력" />
+      <button type="submit">제출</button>
+    </form>
+
+    <script src="prevent-default.js"></script>
+  </body>
+</html>
