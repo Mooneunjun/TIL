@@ -223,3 +223,147 @@ button.removeEventListener("click", handleClick1);
 ## 요약
 
 이벤트는 **마우스, 키보드, 포커스, 입력, 스크롤, 창 크기 변경** 등 다양한 상황에서 발생할 수 있다. 각각의 이벤트는 **적절한 상황에서 활용**될 때 웹 페이지의 동적 인터랙션을 강화할 수 있다. 필요한 이벤트 타입을 미리 알아두고, 적재적소에 활용하는 것이 중요하다.
+
+---
+
+# 이벤트의 핵심 개념 정리
+
+> JavaScript에서 이벤트는 웹 페이지의 동작을 제어하는 중요한 요소다. 이번 글에서는 이벤트 핸들러 등록부터 이벤트 위임, 브라우저 기본 동작 제어까지 주요 개념들을 정리한다.
+
+---
+
+### **1. 이벤트 핸들러 등록하기**
+
+이벤트 핸들러는 특정 동작(이벤트)이 발생했을 때 실행되는 함수다. JavaScript에서 이벤트 핸들러를 등록하는 방법은 여러 가지가 있지만, 가장 권장되는 방법은 `addEventListener` 메서드를 사용하는 것이다.
+
+```jsx
+// 버튼 클릭 이벤트 등록
+const button = document.querySelector("button");
+button.addEventListener("click", () => {
+  console.log("Button clicked!");
+});
+```
+
+---
+
+### **2. 이벤트 핸들러 삭제하기**
+
+등록된 이벤트 핸들러는 `removeEventListener` 메서드를 사용하여 삭제할 수 있다. 주의할 점은 삭제하려면 동일한 함수 참조가 필요하다.
+
+```jsx
+function handleClick() {
+  console.log("Button clicked!");
+}
+
+// 이벤트 등록
+button.addEventListener("click", handleClick);
+
+// 이벤트 삭제
+button.removeEventListener("click", handleClick);
+```
+
+---
+
+### **3. 이벤트 객체 (Event Object)**
+
+이벤트가 발생하면 이벤트 핸들러는 이벤트에 대한 상세 정보를 담은 **이벤트 객체**를 전달받는다. 이벤트 객체는 다양한 프로퍼티를 포함하며, 아래와 같은 주요 정보를 제공한다:
+
+- `type`: 이벤트의 타입(예: `click`, `keydown`).
+- `target`: 이벤트가 발생한 요소.
+- `currentTarget`: 이벤트 핸들러가 등록된 요소.
+- `bubbles`: 이벤트 버블링 여부.
+- `preventDefault`: 브라우저의 기본 동작 차단.
+
+```jsx
+button.addEventListener("click", (event) => {
+  console.log("Event type:", event.type); // click
+  console.log("Target element:", event.target); // 클릭된 요소
+});
+```
+
+---
+
+### **4. 이벤트 버블링 (Event Bubbling)**
+
+이벤트는 발생한 요소에서 시작해 부모 요소로 전파된다. 이를 **이벤트 버블링**이라고 한다. 이벤트 버블링은 기본적으로 활성화되어 있으며, 이를 이용하면 이벤트를 효율적으로 관리할 수 있다.
+
+```html
+<div id="parent">
+  <button id="child">Click me</button>
+</div>
+```
+
+```jsx
+document.getElementById("parent").addEventListener("click", () => {
+  console.log("Parent clicked!");
+});
+
+document.getElementById("child").addEventListener("click", () => {
+  console.log("Child clicked!");
+});
+```
+
+- **결과**: `Child clicked!` → `Parent clicked!`
+
+### **버블링 막기**
+
+`stopPropagation` 메서드를 사용하면 이벤트 전파를 막을 수 있다.
+
+```jsx
+document.getElementById("child").addEventListener("click", (event) => {
+  event.stopPropagation();
+  console.log("Child clicked!");
+});
+```
+
+- **결과**: `Parent clicked!`는 호출되지 않는다.
+
+---
+
+### **5. 이벤트 위임 (Event Delegation)**
+
+이벤트 버블링을 활용하면, 부모 요소에서 자식 요소의 이벤트를 효율적으로 처리할 수 있다. 이를 **이벤트 위임**이라고 한다.
+
+```jsx
+document.getElementById("parent").addEventListener("click", (event) => {
+  if (event.target.tagName === "BUTTON") {
+    console.log("Button clicked!");
+  }
+});
+```
+
+- **장점**: 자식 요소가 동적으로 추가되어도 이벤트를 다시 등록할 필요가 없다.
+
+---
+
+### **6. 브라우저의 기본 동작**
+
+브라우저는 각 HTML 요소에 대해 기본 동작을 제공한다. 예를 들어:
+
+- `<a>` 태그: 클릭 시 링크로 이동.
+- `<form>` 태그: 제출 시 페이지 리로드.
+- `<input>` 태그: 커서 포커스.
+
+### **기본 동작 차단**
+
+`preventDefault` 메서드를 사용하면 기본 동작을 차단할 수 있다.
+
+```jsx
+document.querySelector("a").addEventListener("click", (event) => {
+  event.preventDefault();
+  console.log("Link click prevented!");
+});
+```
+
+- **결과**: 링크 이동이 차단되고 콘솔 메시지가 출력된다.
+
+---
+
+## 요약
+
+- **이벤트 핸들러 등록**: `addEventListener`를 사용.
+- **이벤트 핸들러 삭제**: `removeEventListener`로 동일한 함수 참조 필요.
+- **이벤트 객체**: 이벤트 정보와 동작 제어를 위한 다양한 프로퍼티 제공.
+- **이벤트 버블링**: 자식 요소에서 부모 요소로 이벤트 전파.
+- **이벤트 위임**: 부모 요소에서 자식 요소 이벤트를 효율적으로 관리.
+- **기본 동작 차단**: `preventDefault`를 통해 불필요한 동작 차단.
