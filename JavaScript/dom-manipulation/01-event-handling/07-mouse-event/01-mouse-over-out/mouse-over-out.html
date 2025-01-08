@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Mouse Over and Out Extended</title>
+    <style>
+      /* 컨테이너 스타일 */
+      #box2 {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        width: 236px;
+        margin: 50px auto;
+        border: 2px solid navy;
+        padding: 10px;
+      }
+
+      /* 셀 스타일 */
+      .cell {
+        width: 70px;
+        height: 70px;
+        background-color: lightblue;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1rem;
+        color: darkblue;
+        border: 1px solid navy;
+        transition: background-color 0.3s, transform 0.3s;
+      }
+
+      /* 마우스 오버 시 활성화된 셀 */
+      .cell.on {
+        background-color: lightgreen;
+        transform: scale(1.1);
+        color: white;
+      }
+
+      /* 컨테이너가 활성화된 상태 */
+      #box2.active {
+        background-color: lightyellow;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Mouse Over and Out Advanced Example</h1>
+    <p>아래 박스에 마우스를 올리거나 내릴 때 발생하는 이벤트를 탐구하세요.</p>
+
+    <div id="box2">
+      <div class="cell">1</div>
+      <div class="cell">2</div>
+      <div class="cell">3</div>
+      <div class="cell">4</div>
+      <div class="cell">5</div>
+      <div class="cell">6</div>
+    </div>
+
+    <!-- 외부 JavaScript 파일 연결 -->
+    <script src="mouse-over-out.js"></script>
+  </body>
+</html>
