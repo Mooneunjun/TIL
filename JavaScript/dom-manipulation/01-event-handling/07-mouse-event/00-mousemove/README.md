@@ -138,3 +138,162 @@
    - 마우스 이동 방향 계산.
 4. **주의할 점**:
    - 빈번한 이벤트 호출로 성능 문제가 발생하지 않도록 최적화해야 한다.
+
+---
+
+# client, page, offset의 차이
+
+> 마우스 이벤트를 다룰 때 이벤트 객체가 제공하는 여러 프로퍼티 중 `client`, `page`, `offset`는 마우스의 위치 정보를 담고 있다. 이 세 가지는 서로 다른 기준을 사용하여 좌표를 계산하기 때문에, 차이를 명확히 이해하고 상황에 맞게 사용하는 것이 중요하다.
+
+---
+
+### **`clientX`, `clientY`**
+
+`clientX`와 `clientY`는 현재 **브라우저 화면, 즉 클라이언트 영역 내**에서 마우스의 좌표를 나타낸다.
+
+클라이언트 영역이란 브라우저가 콘텐츠를 표시할 수 있는 영역으로, 스크롤이 적용된 상태라면 현재 보여지는 화면 부분만을 의미한다.
+
+- **`clientX`**: 브라우저 화면(뷰포트) 내에서 마우스의 X 좌표.
+- **`clientY`**: 브라우저 화면(뷰포트) 내에서 마우스의 Y 좌표.
+
+이 값들은 화면에 보이는 부분만을 기준으로 계산되며, 화면의 **좌측 상단** 모서리를 (0, 0)으로 한다. 따라서 스크롤이 있어도 보여지는 영역의 좌표는 변하지 않는다.
+
+### **예제**
+
+```jsx
+document.addEventListener("mousemove", (event) => {
+  console.log(`Client - X: ${event.clientX}, Y: ${event.clientY}`);
+});
+```
+
+> 이 코드는 마우스가 움직일 때 브라우저 화면 내에서의 좌표를 출력한다. 스크롤 위치와는 무관하게 현재 화면에 보이는 범위에서의 좌표를 계산한다.
+
+---
+
+### **`pageX`, `pageY`**
+
+`pageX`와 `pageY`는 **전체 문서(document)를 기준**으로 마우스의 좌표를 나타낸다.
+
+전체 문서 기준이라는 것은, 현재 보이지 않는 영역까지 포함한 스크롤된 상태를 고려한 좌표를 의미한다. 따라서 스크롤이 적용된 경우, 스크롤 위치를 포함한 정확한 위치를 계산할 수 있다.
+
+- **`pageX`**: 문서 전체 기준으로 마우스의 X 좌표.
+- **`pageY`**: 문서 전체 기준으로 마우스의 Y 좌표.
+
+스크롤이 적용되었을 때는 클라이언트 영역의 좌표와는 다른 값을 가진다.
+
+### **예제**
+
+```jsx
+document.addEventListener("mousemove", (event) => {
+  console.log(`Page - X: ${event.pageX}, Y: ${event.pageY}`);
+});
+```
+
+> 스크롤 위치를 포함하여 문서 기준으로 마우스 위치를 출력한다. 전체 문서에서의 좌표를 필요로 할 때 유용하다.
+
+---
+
+### **`offsetX`, `offsetY`**
+
+`offsetX`와 `offsetY`는 **이벤트가 발생한 타겟 요소(target)를 기준**으로 마우스의 위치를 나타낸다.
+
+이벤트가 발생한 요소의 좌측 상단 모서리가 (0, 0)으로 설정되며, 해당 요소 안에서의 상대적인 위치를 계산한다.
+
+- **`offsetX`**: 이벤트 발생 타겟 요소 내에서 마우스의 X 좌표.
+- **`offsetY`**: 이벤트 발생 타겟 요소 내에서 마우스의 Y 좌표.
+
+이 프로퍼티는 특정 요소 내부에서 마우스의 상대적인 좌표를 필요로 할 때 매우 유용하다.
+
+### **예제**
+
+```jsx
+const box = document.querySelector("#box");
+box.addEventListener("mousemove", (event) => {
+  console.log(`Offset - X: ${event.offsetX}, Y: ${event.offsetY}`);
+});
+```
+
+> 마우스가 특정 요소 안에서 이동할 때의 상대적인 좌표를 출력한다.
+
+---
+
+### **차이점 요약**
+
+| 프로퍼티    | 기준                       | 스크롤 포함 여부 |
+| ----------- | -------------------------- | ---------------- |
+| `clientX/Y` | 브라우저 화면(뷰포트) 기준 | 포함하지 않음    |
+| `pageX/Y`   | 문서 전체 기준             | 포함함           |
+| `offsetX/Y` | 이벤트 발생 타겟 요소 기준 | 포함하지 않음    |
+
+---
+
+## **활용 예제**
+
+### **특정 위치에서 동작 변경**
+
+마우스가 특정 위치에 도달했을 때 동작을 바꾸는 간단한 코드.
+
+```jsx
+const box = document.querySelector("#box");
+box.addEventListener("mousemove", (event) => {
+  if (event.offsetX > 150) {
+    box.style.backgroundColor = "lightgreen";
+  } else {
+    box.style.backgroundColor = "lightblue";
+  }
+});
+```
+
+---
+
+### **스크롤 위치를 포함한 좌표 계산**
+
+문서 기준의 정확한 위치를 계산하여 특정 동작을 정의.
+
+```jsx
+document.addEventListener("mousemove", (event) => {
+  const position = event.pageX + window.scrollX;
+  console.log(`스크롤을 포함한 X 좌표: ${position}`);
+});
+```
+
+---
+
+### **마우스 이동 방향 파악**
+
+현재 위치와 이전 위치를 비교해 마우스의 이동 방향을 계산.
+
+```jsx
+let prevX = 0;
+let prevY = 0;
+
+document.addEventListener("mousemove", (event) => {
+  const directionX = event.clientX > prevX ? "오른쪽" : "왼쪽";
+  const directionY = event.clientY > prevY ? "아래쪽" : "위쪽";
+
+  console.log(`X 방향: ${directionX}, Y 방향: ${directionY}`);
+  prevX = event.clientX;
+  prevY = event.clientY;
+});
+```
+
+---
+
+### **주의 사항**
+
+1. **스크롤 여부에 따른 좌표 차이**
+   - `client`와 `page`는 스크롤 여부에 따라 다른 값을 반환한다. 전체 문서 기준인지, 현재 보이는 화면 기준인지 명확히 이해하고 사용해야 한다.
+2. **타겟 요소의 중요성**
+   - `offset`은 이벤트가 발생한 요소를 기준으로 계산되므로, 이벤트 타겟이 달라지면 값도 바뀔 수 있다.
+
+---
+
+!https://velog.velcdn.com/images/moon_dev/post/001bbcdc-fd09-4dd1-8f7a-4872a0454975/image.png
+
+### **요약**
+
+- **`client`**: 브라우저 화면(뷰포트)을 기준으로 계산되며, 스크롤 위치는 포함되지 않는다.
+- **`page`**: 문서 전체를 기준으로 계산되며, 스크롤 위치가 포함된다.
+- **`offset`**: 이벤트가 발생한 타겟 요소를 기준으로 계산된다.
+- **활용**: 마우스의 위치 정보를 기반으로 다양한 동작을 구현할 수 있다.
+- **주의 사항**: 스크롤 여부와 타겟 요소의 기준을 정확히 이해하고 적절한 프로퍼티를 사용해야 한다.
