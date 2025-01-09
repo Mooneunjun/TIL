@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Mouse Events Comparison</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        background-color: #f9f9f9;
+      }
+
+      h1 {
+        margin: 20px;
+        font-size: 24px;
+        color: #333;
+      }
+
+      .box {
+        display: inline-block;
+        width: 240px;
+        height: 150px;
+        margin: 20px;
+        padding: 10px;
+        border: 2px solid navy;
+        background-color: lightblue;
+        position: relative;
+      }
+
+      .title {
+        display: block;
+        margin-top: 10px;
+        padding: 5px;
+        background-color: white;
+        border: 1px solid darkblue;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Mouse Event Comparison</h1>
+    <div id="box1" class="box">
+      <span class="title">mouseover event count: 0</span>
+    </div>
+    <div id="box2" class="box">
+      <span class="title">mouseenter event count: 0</span>
+    </div>
+    <script src="mouse-enter-leave.js"></script>
+  </body>
+</html>
