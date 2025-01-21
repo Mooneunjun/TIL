@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Input Event</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+      }
+      input {
+        display: block;
+        margin-bottom: 15px;
+        padding: 10px;
+        font-size: 16px;
+        width: 300px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+      }
+      #log {
+        margin-top: 20px;
+        padding: 10px;
+        background-color: #f9f9f9;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Input Events Demo</h1>
+    <form id="form">
+      <label for="username">사용자 이름:</label>
+      <input type="text" id="username" placeholder="이름을 입력하세요" />
+
+      <label for="email">이메일:</label>
+      <input type="email" id="email" placeholder="이메일을 입력하세요" />
+
+      <label for="password">비밀번호:</label>
+      <input
+        type="password"
+        id="password"
+        placeholder="비밀번호를 입력하세요"
+      />
+    </form>
+    <div id="log">
+      <h3>이벤트 로그</h3>
+      <ul id="event-log"></ul>
+    </div>
+    <script src="input-event.js"></script>
+  </body>
+</html>
