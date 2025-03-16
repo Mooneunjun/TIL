@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scroll Event</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            height: 200vh; /* 스크롤 테스트를 위해 높이를 크게 설정 */
+        }
+
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: #fff;
+            padding: 15px 20px;
+            text-align: center;
+            font-size: 1.2rem;
+            transition: box-shadow 0.3s ease;
+        }
+
+        .scrolled {
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .content {
+            margin-top: 80px;
+            padding: 20px;
+            font-size: 1.1rem;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="navbar">스크롤 이벤트 테스트</div>
+    <div class="content">
+        <p>스크롤을 아래로 내려보세요.</p>
+        <p>30px 이상 스크롤 시 네비게이션 바에 그림자가 추가됩니다.</p>
+        <p>또한 콘솔을 열고(F12) 스크롤을 내리거나 올릴 때의 로그를 확인하세요.</p>
+    </div>
+
+    <script src="scroll-event.js"></script>
+</body>
+</html>
